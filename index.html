@@ -18,6 +18,7 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap-grid.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.5/css/uikit.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css"/>
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
     <!-- Scripts -->
@@ -33,45 +34,51 @@
     </script>
 </head>
 <body>
-
-    <!-- <div class="uk-container " ;> -->
-        <!-- <div class="uk-card-body uk-width-8-9 uk-height-1-1 uk-position-center" style="background-image: linear-gradient(#eee, #eee, #eef) "> -->
-
-            <!-- TODO:
-                * Display search for end-user to input a location, date, and time
-            -->
+        <nav class="uk-navbar-container" uk-navbar>
+                <div id="navbar" class="uk-navbar-left">
+                    <ul class="uk-navbar-nav">
+                        <li class="uk-active"><a href="index.html">Home</a></li>
+                        <li>
+                    </ul>
             
-            <!-- location input -->
+                </div>
+            </nav>
+            <form class="uk-form-stacked">
 
-            <div class="uk-container uk-position-large uk-position-center">
-<div class="row">
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="form-stacked-text">Where are you going?</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="form-stacked-text" type="text" placeholder="Phoenix, AZ">
+                        </div>
+                    </div>
+                
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="form-stacked-select">What Day?</label>
+                        <div class="uk-form-controls">
+                            <select class="uk-select" id="form-stacked-select">
+                                <option>Monday</option>
+                                <option>Tuesday</option>
+                                <option>Wednesday</option>
+                                <option>Thursday</option>
+                                <option>Friday</option>
+                                <option>Saturday</option>
+                                <option>Sunday</option>
+                            </select>
+                        </div>
+                    </div>
+                
+                    <!-- <div class="uk-margin">
+                        <div class="uk-form-label">Radio</div>
+                        <div class="uk-form-controls">
+                            <label><input class="uk-radio" type="radio" name="radio1"> Option 01</label><br>
+                            <label><input class="uk-radio" type="radio" name="radio1"> Option 02</label>
+                        </div> -->
+                    </div>
 
-    
-    <label class="uk-margin" for="location-input">Your Location</label><br> <hr>
-    <input type="text" class="uk-input uk-width-1-1" id="location-input">
-    
-</div>
-                <!-- Date Input for later specificity-->
-    <!-- <div class="row"> -->
+                    <button class="uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom">Let's Go on a Date!</button>
+                
+                </form>
 
-        <!-- <input type="date" name="date" id="date-input"> -->
-        <!-- <label for="datepicker" class="uk-label-danger">Date</label>
-        <input type="text" id="datepicker"> -->
-    <!-- </div>             -->
-        
-        <!-- Time for later addition-->
-<div class="row uk-margin-large">
-
-    <!-- <label for="time-input" class="uk-label-caution">Time</label>
-    <input type="time" name="time" id="time-input"> -->
-
-    <!-- <div class="uk-button-group">Time
-        <button class="uk-button-danger uk-width-1-4 uk-margin-small-left">Morning</button>
-        <button class="uk-button-danger uk-width-1-4 uk-margin-small-left">Lunch</button>
-        <button class="uk-button-danger uk-width-1-4 uk-margin-small-left">Afternoon</button>
-        <button class="uk-button-danger uk-width-1-4 uk-margin-small-left">Evening</button>
-        
-    </div> -->
 </div>
         
     </div>
