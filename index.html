@@ -21,13 +21,44 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css"/>
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
     <!-- Scripts -->
-    <script defer src="assets/js/firebase-init.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script defer src="assets/js/index.js"></script>
+    <script  src="assets/js/firebase-init.js"></script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script  src="assets/js/index.js"></script>
+    <script  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $( function() {
+        console.log(datepicker())
+      $( "#datepicker" ).datepicker();
+    } );
+    </script>
 </head>
 <body>
-    <!-- TODO:
-        * Display search for end-user to input a location, date, and time
-    -->
-</body>
-</html>
+
+    <!-- <div class="uk-container " ;> -->
+        <!-- <div class="uk-card-body uk-width-8-9 uk-height-1-1 uk-position-center" style="background-image: linear-gradient(#eee, #eee, #eef) "> -->
+
+            <!-- TODO:
+                * Display search for end-user to input a location, date, and time
+            -->
+            
+            <!-- location input -->
+            <div class="uk-position-large uk-position-center">
+
+                
+                <label class="uk-label" for="location-input">Where you at, boo?</label><br>
+                <input type="text" class="uk-input uk-width-1-2" id="location-input">
+                
+                <!-- Date Input -->
+                
+                <input type="date" name="date" id="date-input">
+                <p>Date: <input type="text" id="datepicker"></p>
+                
+                <!-- Time -->
+                
+                <input type="time" name="time" id="time-input">
+
+            </div>
+        </div>
+    </div>
+    </body>
+    </html>
