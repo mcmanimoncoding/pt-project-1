@@ -21,16 +21,10 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css"/>
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
     <!-- Scripts -->
-    <script  src="assets/js/firebase-init.js"></script>
+    <!-- <script  src="assets/js/firebase-init.js"></script> -->
     <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script  src="assets/js/index.js"></script>
     <script  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script>
-    $( function() {
-        console.log(datepicker())
-      $( "#datepicker" ).datepicker();
-    } );
-    </script>
+    
 </head>
 <body>
 
@@ -46,36 +40,24 @@
             <div class="uk-container uk-position-large uk-position-center">
 <div class="row">
 
-    
-    <label class="uk-margin" for="location-input">Your Location</label><br> <hr>
-    <input type="text" class="uk-input uk-width-1-1" id="location-input">
+    <form action="">
+
+        <label class="uk-margin" for="location-input">Your Location</label><br> <hr>
+        <input type="text" class="uk-input uk-width-1-1" id="location-input">
+        <button class="uk-button-large" id="search-button" type="button">Go!</button>
+    </form>
     
 </div>
-                <!-- Date Input for later specificity-->
-    <!-- <div class="row"> -->
-
-        <!-- <input type="date" name="date" id="date-input"> -->
-        <!-- <label for="datepicker" class="uk-label-danger">Date</label>
-        <input type="text" id="datepicker"> -->
-    <!-- </div>             -->
-        
-        <!-- Time for later addition-->
+    
 <div class="row uk-margin-large">
 
-    <!-- <label for="time-input" class="uk-label-caution">Time</label>
-    <input type="time" name="time" id="time-input"> -->
-
-    <!-- <div class="uk-button-group">Time
-        <button class="uk-button-danger uk-width-1-4 uk-margin-small-left">Morning</button>
-        <button class="uk-button-danger uk-width-1-4 uk-margin-small-left">Lunch</button>
-        <button class="uk-button-danger uk-width-1-4 uk-margin-small-left">Afternoon</button>
-        <button class="uk-button-danger uk-width-1-4 uk-margin-small-left">Evening</button>
-        
-    </div> -->
+    
 </div>
         
     </div>
 </div>
     </div>
     </body>
+    <script  src="assets/js/index.js"></script>
+
     </html>
