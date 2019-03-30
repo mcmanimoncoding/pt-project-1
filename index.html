@@ -40,7 +40,7 @@
     />
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
     <!-- Scripts -->
-    <script src="assets/js/firebase-init.js"></script>
+    <!-- <script src="assets/js/firebase-init.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="assets/js/index.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -55,7 +55,7 @@
       </div>
     </nav> -->
 
-    <div class="container">
+    <div class="container" id="form-submit">
         <div class="row">
             <div class="col-sm"></div>
             <div class="col-sm">
@@ -77,7 +77,7 @@
                             <div class="uk-margin">
                               <label class="uk-form-label" for="form-stacked-select">What Day?</label>
                               <div class="uk-form-controls">
-                                <select class="uk-select" id="form-stacked-select">
+                                <select class="uk-select" id="day-option">
                                   <option>Monday</option>
                                   <option>Tuesday</option>
                                   <option>Wednesday</option>
@@ -96,7 +96,7 @@
                                                       <label><input class="uk-radio" type="radio" name="radio1"> Option 02</label>
                                                   </div> -->
                             <button
-                              class="uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom"
+                              class="uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom" id="search-button"
                             >
                               Let's Go on a Date!
                             </button>
