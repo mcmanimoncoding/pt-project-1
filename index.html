@@ -1,82 +1,110 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Date Night for Dummies - Find your perfect date night!</title>
-    <meta name="keywords" content="date,night,events,restaurant,eat,food,discover,find,search">
-    <meta name="description" content="TODO: Add description here!">
-    <meta name="subject" content="Date Night">
-    <meta name="language" content="en">
-    <meta name="robots" content="index,follow">
-    <meta name="googlebot" content="index,follow">
-    <meta name="classification" content="search">
-    <meta name="rating" content="General">
-    <meta name="referrer" content="never">
+    <meta
+      name="keywords"
+      content="date,night,events,restaurant,eat,food,discover,find,search"
+    />
+    <meta name="description" content="TODO: Add description here!" />
+    <meta name="subject" content="Date Night" />
+    <meta name="language" content="en" />
+    <meta name="robots" content="index,follow" />
+    <meta name="googlebot" content="index,follow" />
+    <meta name="classification" content="search" />
+    <meta name="rating" content="General" />
+    <meta name="referrer" content="never" />
     <!-- Stylesheets -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap-grid.min.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.5/css/uikit.min.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css"/>
-    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap-grid.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.5/css/uikit.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
     <!-- Scripts -->
-    <!-- <script  src="assets/js/firebase-init.js"></script> -->
-    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    
-</head>
-<body>
-        <nav class="uk-navbar-container" uk-navbar>
-                <div id="navbar" class="uk-navbar-left">
-                    <ul class="uk-navbar-nav">
-                        <li class="uk-active"><a href="index.html">Home</a></li>
-                        <li>
-                    </ul>
-            
-                </div>
-            </nav>
-            <form class="uk-form-stacked">
+    <script src="assets/js/firebase-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/js/index.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  </head>
+  <body>
+    <!-- <nav class="uk-navbar-container" uk-navbar>
+      <div id="navbar" class="uk-navbar-left">
+        <ul class="uk-navbar-nav">
+          <li class="uk-active"><a href="index.html">Home</a></li>
+          <li></li>
+        </ul>
+      </div>
+    </nav> -->
 
-                    <div class="uk-margin">
-                        <label class="uk-form-label" for="form-stacked-text">Where are you going?</label>
-                        <div class="uk-form-controls">
-                            <input class="uk-input" id="form-stacked-text" type="text" placeholder="Phoenix, AZ">
-                        </div>
-                    </div>
-                
-                    <div class="uk-margin">
-                        <label class="uk-form-label" for="form-stacked-select">What Day?</label>
-                        <div class="uk-form-controls">
-                            <select class="uk-select" id="form-stacked-select">
-                                <option>Monday</option>
-                                <option>Tuesday</option>
-                                <option>Wednesday</option>
-                                <option>Thursday</option>
-                                <option>Friday</option>
-                                <option>Saturday</option>
-                                <option>Sunday</option>
-                            </select>
-                        </div>
-                    </div>
-                
-                    <!-- <div class="uk-margin">
-                        <div class="uk-form-label">Radio</div>
-                        <div class="uk-form-controls">
-                            <label><input class="uk-radio" type="radio" name="radio1"> Option 01</label><br>
-                            <label><input class="uk-radio" type="radio" name="radio1"> Option 02</label>
-                        </div> -->
-                    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm"></div>
+            <div class="col-sm">
+                    <form class="uk-form-stacked">
+                            <div class="uk-margin">
+                              <label class="uk-form-label" for="form-stacked-text"
+                                >Where are you going?</label
+                              >
+                              <div class="uk-form-controls">
+                                <input
+                                  class="uk-input"
+                                  id="form-stacked-text"
+                                  type="text"
+                                  placeholder="Phoenix, AZ"
+                                />
+                              </div>
+                            </div>
+                          
+                            <div class="uk-margin">
+                              <label class="uk-form-label" for="form-stacked-select">What Day?</label>
+                              <div class="uk-form-controls">
+                                <select class="uk-select" id="form-stacked-select">
+                                  <option>Monday</option>
+                                  <option>Tuesday</option>
+                                  <option>Wednesday</option>
+                                  <option>Thursday</option>
+                                  <option>Friday</option>
+                                  <option>Saturday</option>
+                                  <option>Sunday</option>
+                                </select>
+                              </div>
+                            </div>
+                          
+                            <!-- <div class="uk-margin">
+                                                  <div class="uk-form-label">Radio</div>
+                                                  <div class="uk-form-controls">
+                                                      <label><input class="uk-radio" type="radio" name="radio1"> Option 01</label><br>
+                                                      <label><input class="uk-radio" type="radio" name="radio1"> Option 02</label>
+                                                  </div> -->
+                            <button
+                              class="uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom"
+                            >
+                              Let's Go on a Date!
+                            </button>
+                          </form>
+            </div>
+            <div class="col-sm"></div>
+        </div>
+    </div>
+  </body>
+</html>
 
-                    <button class="uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom">Let's Go on a Date!</button>
-                
-                </form>
-
-
-        
-    
-    </body>
-    <script  src="assets/js/index.js"></script>
-
-    </html>
