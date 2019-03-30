@@ -22,7 +22,6 @@ var Ticketmaster = {
             return acc + `&${String(key)}=${String(value)}`;
         }, "");
         let dataFetch = `${ticketmasterEnpoints.search}?apikey=${ticketmasterKeys.get()}${parameters}`;
-        console.log(dataFetch);
         return fetch(dataFetch).then(response => response.json());
     }
 }
