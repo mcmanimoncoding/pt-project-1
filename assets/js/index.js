@@ -1,13 +1,14 @@
-
+// var userInput = 
+// { userLocation: newLocation , 
+//     chosenDay: newDay};
 
 var newLocation;
+var newDay;
 
-$("#search-button").on("click", function() {
+$("#search-button").on("click", function () {
     event.preventDefault()
     newLocation = $("#location-input").val().trim();
-    console.log(newLocation);
+    newDay = $("#day-input").val();
+    console.log(newLocation + " : " + newDay);
 });
-
-
-
 
