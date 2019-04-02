@@ -1,4 +1,5 @@
 body{
+/*    font-family: 'Quicksand', sans-serif; */
     background: url(../assets/images/bg-image.jpg);
     /* background-repeat: no-repeat; */
     /* background-size: cover; */
@@ -19,3 +20,4 @@ body{
     background-color: #126f80;
     color: #eeeeee;
 }
+
