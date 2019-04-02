@@ -22,7 +22,6 @@ var Zomato = {
             return acc + `&${String(key)}=${String(value)}`;
         }, "").replace(/^&/, "?");
         let dataFetch = `${zomatoEndpoints.search}${parameters}`;
-        console.log(dataFetch);
         return fetch(dataFetch, { headers: {"user-key": zomatoKeys.get()}}).then(response => response.json());
     }
 }
