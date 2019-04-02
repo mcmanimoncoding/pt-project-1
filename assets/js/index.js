@@ -1,4 +1,3 @@
-
 var placesAutocomplete = places({
   appId: 'plUKJGJ6LEVW',
   apiKey: 'b28ccea8a5ebad3289976644f86bd0c4',
