@@ -1,11 +1,11 @@
 
 firebase.initializeApp({
-    apiKey: "AIzaSyAfbmcv-VJ4PuXQ3actT59u2-aU7iIEV0s",
-    authDomain: "date-night-for-dummies.firebaseapp.com",
-    databaseURL: "https://date-night-for-dummies.firebaseio.com",
-    projectId: "date-night-for-dummies",
-    storageBucket: "date-night-for-dummies.appspot.com",
-    messagingSenderId: "191871767511"
+    apiKey: "AIzaSyB7m18QCPh-Hwc5iayRJfByrUvLo2s2Cl0",
+    authDomain: "kelly-kapoor.firebaseapp.com",
+    databaseURL: "https://kelly-kapoor.firebaseio.com",
+    projectId: "kelly-kapoor",
+    storageBucket: "kelly-kapoor.appspot.com",
+    messagingSenderId: "298814023535"
 });
 
 database = firebase.database();
