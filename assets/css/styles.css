@@ -1,18 +1,21 @@
+html {
+    height: 100%;
+}
 body{
-    background: url(../assets/images/bg-image.jpg);
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
+    background: url(../images/bg-image.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover; 
 }
 
 .uk-form-label {
     color: #eeeeee;
 }
 #form-submit {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
+    margin: auto;
 }
 
 #search-button {
