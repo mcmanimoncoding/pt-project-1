@@ -4,7 +4,7 @@ $(_ => {
     let data = window.localStorage.getItem("indexData");
     let loadedData = JSON.parse(data);
 
-    // Using postal code as a placeholder for now
+    // TODO: Update query to use lng lat & radius
     Ticketmaster.search({ postalCode: "85224" })
         .then(data => {
             let { _embedded: { events } } = data;
