@@ -15,8 +15,11 @@ $(_ => {
     
     /**
      * Caches the the given object into local storage for later use.
+     * Local storage entry is "savedEventData".
+     *
+     * *NOTE*: Object is saved to local storage as JSON, do not forget to call `JSON.parse()`
      * 
-     * @param  {type} savedEventData Object that will be saved to local storage
+     * @param  {Object} savedEventData Object that will be saved to local storage
      */
     function saveEventData(savedEventData) {
         window.localStorage.setItem("savedEventData", JSON.stringify(savedEventData));
