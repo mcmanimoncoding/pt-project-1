@@ -2,7 +2,6 @@ html {
     height:100%;
 }
 body{
-    /* background-color: aqua; */
     background-image: url(../images/bg-image.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -10,6 +9,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .uk-form-label {
@@ -20,3 +20,4 @@ body{
     background-color: #126f80;
     color: #eeeeee;
 }
+

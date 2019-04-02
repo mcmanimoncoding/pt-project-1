@@ -38,11 +38,18 @@
       type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css"
     />
-    <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
     <!-- Scripts -->
     <!-- <script src="assets/js/firebase-init.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="assets/js/index.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/places.js@1.16.1"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script defer src="assets/js/index.js"></script>
+=======
+<!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/js/index.js"></script> -->
+
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
   <body>
@@ -61,23 +68,24 @@
             <div class="col-sm">
                     <form class="uk-form-stacked">
                             <div class="uk-margin">
-                              <label class="uk-form-label" for="form-stacked-text"
+                              <label class="uk-form-label" for="location-input"
                                 >Where are you going?</label
                               >
                               <div class="uk-form-controls">
                                 <input
                                   class="uk-input"
-                                  id="form-stacked-text"
-                                  type="text"
+                                  id="location-input"
+                                  type="search"
                                   placeholder="Phoenix, AZ"
                                 />
                               </div>
                             </div>
                           
                             <div class="uk-margin">
-                              <label class="uk-form-label" for="form-stacked-select">What Day?</label>
+                              <label class="uk-form-label" for="day-input">What Day?</label>
                               <div class="uk-form-controls">
-                                <select class="uk-select" id="day-option">
+
+                                <select class="uk-select" id="day-input">
                                   <option>Monday</option>
                                   <option>Tuesday</option>
                                   <option>Wednesday</option>
@@ -89,12 +97,7 @@
                               </div>
                             </div>
                           
-                            <!-- <div class="uk-margin">
-                                                  <div class="uk-form-label">Radio</div>
-                                                  <div class="uk-form-controls">
-                                                      <label><input class="uk-radio" type="radio" name="radio1"> Option 01</label><br>
-                                                      <label><input class="uk-radio" type="radio" name="radio1"> Option 02</label>
-                                                  </div> -->
+                            
                             <button
                               class="uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom" id="search-button"
                             >
