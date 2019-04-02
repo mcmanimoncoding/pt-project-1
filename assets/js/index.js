@@ -1,3 +1,25 @@
+
+var newLocation;
+var newDay;
+
+
+$("#search-button").on("click", function () {
+    event.preventDefault()
+    newLocation = $("#location-input").val().trim();
+    newDay = $("#datepicker-3").val();
+    console.log(newLocation + " : " + newDay);
+});
+
+$(function() {
+    $( "#datepicker-3" ).datepicker({
+       appendText:"(dd-mm-yy)",
+       dateFormat:"dd-mm-yy",
+       altField: "#datepicker-4",
+       altFormat: "DD, d MM, yy"
+    });
+ });
+
+
 $(function() {
   var placesAutocomplete = places({
     appId: 'plUKJGJ6LEVW',
