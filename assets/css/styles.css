@@ -1,19 +1,19 @@
+html {
+    height:100%;
+}
 body{
-/*    font-family: 'Quicksand', sans-serif; */
-    background: url(../assets/images/bg-image.jpg);
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
+    background-image: url(../images/bg-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .uk-form-label {
     color: #eeeeee;
-}
-#form-submit {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
 }
 
 #search-button {
