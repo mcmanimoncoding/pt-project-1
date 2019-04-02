@@ -1,6 +1,4 @@
 
-// TODO: Get user-inputted locally-stored location info
-
 $(_ => {
     // Get loaded data from local storage
     let data = window.localStorage.getItem("indexData");
@@ -14,8 +12,17 @@ $(_ => {
                 // TODO: Add code for displaying events to the end-user and handling event selection here
             });
         });
+    
+    /**
+     * Caches the the given object into local storage for later use.
+     * 
+     * @param  {type} savedEventData Object that will be saved to local storage
+     */
+    function saveEventData(savedEventData) {
+        window.localStorage.setItem("savedEventData", JSON.stringify(savedEventData));
+    }
+
+
+    // TODO: Add "loading" animation to page before results are displayed
+
 })
-
-
-
-// TODO: Add "loading" animation to page before results are displayed
