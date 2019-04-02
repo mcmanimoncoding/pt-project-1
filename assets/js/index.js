@@ -1,5 +1,4 @@
 
-
 var newLocation;
 var newDay;
 

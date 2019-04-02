@@ -1,4 +1,23 @@
-/* body{
-    font-family: 'Quicksand', sans-serif;
-    
-} */
+body{
+/*    font-family: 'Quicksand', sans-serif; */
+    background: url(../assets/images/bg-image.jpg);
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+}
+
+.uk-form-label {
+    color: #eeeeee;
+}
+#form-submit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+#search-button {
+    background-color: #126f80;
+    color: #eeeeee;
+}
+
