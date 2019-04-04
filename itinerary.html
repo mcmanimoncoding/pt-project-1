@@ -20,7 +20,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css" />
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/itinerary.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -37,19 +37,49 @@
             <h2 class="center-text">Success Stories</h2>
         </div>
     </div>
-    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+
     <div>
-        <form>
+        <form class="container block">
+            <div class="form-group">
+                <label for="email-input">Email address</label>
+                <input type="email" class="form-control" id="email-input" placeholder="name@example.com">
+            </div>
             <div class="form-group">
                 <label for="comment">Have your own success story? Share it with us!</label>
                 <textarea class="form-control" id="comment" rows="3"></textarea>
             </div>
-
-            <button type="button" id="submitbtn" class="btn btn-success">Success</button>
+            <button type="button" id="submitbtn" class="btn btn-success">Success!</button>
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        What others are saying
+                    </div>
+                    <div class="card-body">
+                        <div id="full-review-list"></div>
+                    </div>
+                </div>
+            </div>
         </form>
     </div>
+
+    <!--<div id="carouselExampleSlidesOnly" class="carousel slide" data - ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src=".../800x400?auto=yes&bg=777&fg=555&text=First slide" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src=".../800x400?auto=yes&bg=666&fg=444&text=Second slide" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src=".../800x400?auto=yes&bg=555&fg=333&text=Third slide" alt="Third slide">
+            </div>
+        </div>-->
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
     <script>
+
         // Initialize Firebase
+
         var config = {
             apiKey: "AIzaSyB7m18QCPh-Hwc5iayRJfByrUvLo2s2Cl0",
             authDomain: "kelly-kapoor.firebaseapp.com",
@@ -65,28 +95,42 @@
 
         // Initial Values
         //var name = "";
-        //var email = "";
+        var email = "";
         var comment = "";
 
         $("#submitbtn").on("click", function (event) {
             event.preventDefault();
 
             //name = $("#name-input").val().trim();
-            //email = $("#email-input").val().trim();
+            emailInput = $("#email-input").val().trim();
             comment = $("#comment").val().trim();
 
             // Code for the push
             dataRef.ref().push({
 
                 //name: name,
-                //email: email,
+                emailInput: emailInput,
                 comment: comment
 
             });
+            // Firebase watcher + initial loader HINT: This code behaves similarly to .on("value")
+            dataRef.ref().on("child_added", function (childSnapshot) {
+
+                // Log everything that's coming out of snapshot
+                console.log(childSnapshot.val().comment);
+                console.log(childSnapshot.val().emailInput);
+                $("#full-review-list").append("<div class='well'><span class='member-name'> " +
+                    childSnapshot.val().name +
+                    " </span><span class='emailInput'> " + childSnapshot.val().email +
+                    " </span><span class='comment'> " + childSnapshot.val().comment +
+                    " </span></div>");
+                // $('.carousel').carousel({
+                //     interval: 2000
+
+            })
+
         });
-
     </script>
-
 </body>
 <!-- Scripts -->
 <script defer src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
