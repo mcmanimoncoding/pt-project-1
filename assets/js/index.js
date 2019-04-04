@@ -11,8 +11,8 @@ $("#search-button").on("click", function () {
 });
 
 $(function() {
-    $( "#datepicker-3" ).datepicker({
-       appendText:"(dd-mm-yy)",
+    $( "#datepicker-3").datepicker({
+       appendText:"",
        dateFormat:"dd-mm-yy",
        altField: "#datepicker-4",
        altFormat: "DD, d MM, yy"
@@ -41,10 +41,10 @@ $(function() {
 
   $("#search-button").on("click", function () {
     event.preventDefault();
-    let datePicked = $("#day-input").val();
     let locationName = $("#location-input").val();
-    if (lat && lng) {
-      let transferData = {locationName, datePicked, lat, lng};
+    let date = $("#datepicker-3").val();
+    if (lat && lng && locationName && date) {
+      let transferData = {locationName, lat, lng, date};
       window.localStorage.setItem("indexData", JSON.stringify(transferData));
       window.open("./find-events.html", "_self");
     } else {
