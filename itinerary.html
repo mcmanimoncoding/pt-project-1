@@ -17,20 +17,79 @@
     <meta name="referrer" content="never">
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap-grid.min.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css" />
+        href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css" />
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-    <!-- Scripts -->
-    <script defer src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script defer src="assets/js/make-a-match.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
 </head>
+
 <body>
     <!-- TODO:
         * Collect users chosen event and restaurant, display them to the user
         * Show end-user links to booking restaurant/ordering event tickets
     -->
+    <!-- Success Stories HTML -->
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid bg-grey">
+            <h2 class="center-text">Success Stories</h2>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+    <div>
+        <form>
+            <div class="form-group">
+                <label for="comment">Have your own success story? Share it with us!</label>
+                <textarea class="form-control" id="comment" rows="3"></textarea>
+            </div>
+
+            <button type="button" id="submitbtn" class="btn btn-success">Success</button>
+        </form>
+    </div>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyB7m18QCPh-Hwc5iayRJfByrUvLo2s2Cl0",
+            authDomain: "kelly-kapoor.firebaseapp.com",
+            databaseURL: "https://kelly-kapoor.firebaseio.com",
+            projectId: "kelly-kapoor",
+            storageBucket: "kelly-kapoor.appspot.com",
+            messagingSenderId: "298814023535"
+        };
+
+        firebase.initializeApp(config);
+
+        var dataRef = firebase.database();
+
+        // Initial Values
+        var name = "";
+        var email = "";
+        var comment = "";
+
+        $("#submitbtn").on("click", function (event) {
+            event.preventDefault();
+
+            //name = $("#name-input").val().trim();
+            //email = $("#email-input").val().trim();
+            comment = $("#comment").val().trim();
+
+            // Code for the push
+            dataRef.ref().push({
+
+                name: name,
+                email: email,
+                comment: comment
+
+            });
+        });
+
+    </script>
+
 </body>
+<!-- Scripts -->
+<script defer src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script defer src=".\assets/js/make-a-match.js"></script>
+
 </html>
