@@ -63,7 +63,7 @@
     </header>-->
     <div class="container">
       <div class="row">
-        <div class="col-sm">
+        <div class="col-sm" id="events-div">
           <div class="uk-card uk-card-default uk-width-1-2@m" id="event1">
             <div class="uk-card-header">
               <div class="uk-grid-small uk-flex-middle" uk-grid>
@@ -82,7 +82,7 @@
                   >Event Title
                   </h3>
                   <p class="uk-text-meta uk-margin-remove-top">
-                    <time datetime="2016-04-01T19:00">{{ result.time }}</time>
+                    <time class="event-time" datetime="2016-04-01T19:00">{{ result.time }}</time>
                   </p>
                 </div>
               </div>
@@ -115,9 +115,7 @@
                     {{ result.title }}
                   </h3>
                   <p class="uk-text-meta uk-margin-remove-top">
-                    <time datetime="2016-04-01T19:00">
-                      {{ result.time }}
-                    </time>
+                    <time class="event-time" datetime="2016-04-01T19:00">{{ result.time }}</time>
                   </p>
                 </div>
               </div>
@@ -150,7 +148,7 @@
                     {{ result.title }}
                   </h3>
                   <p class="uk-text-meta uk-margin-remove-top">
-                    <time datetime="2016-04-01T19:00">{{ result.time }}</time>
+                        <time class="event-time" datetime="2016-04-01T19:00">{{ result.time }}</time>
                   </p>
                 </div>
               </div>
@@ -183,9 +181,8 @@
                     {{ result.title }}
                   </h3>
                   <p class="uk-text-meta uk-margin-remove-top">
-                    <time datetime="2016-04-01T19:00">
-                      {{ result.time }}
-                    </time>
+                        <time class="event-time" datetime="2016-04-01T19:00">{{ result.time }}</time>
+
                   </p>
                 </div>
               </div>
@@ -218,7 +215,7 @@
                     {{ result.title }}
                   </h3>
                   <p class="uk-text-meta uk-margin-remove-top">
-                    <time datetime="2016-04-01T19:00">{{ result.time }}</time>
+                    <time class="event-time" datetime="2016-04-01T19:00">{{ result.time }}</time>
                   </p>
                 </div>
               </div>
@@ -251,9 +248,7 @@
                     {{ result.title }}
                   </h3>
                   <p class="uk-text-meta uk-margin-remove-top">
-                    <time datetime="2016-04-01T19:00">
-                      {{ result.time }}
-                    </time>
+                    <time class="event-time" datetime="2016-04-01T19:00">{{ result.time }}</time>
                   </p>
                 </div>
               </div>
@@ -286,7 +281,7 @@
                     {{ result.title }}
                   </h3>
                   <p class="uk-text-meta uk-margin-remove-top">
-                    <time datetime="2016-04-01T19:00">{{ result.time }}</time>
+                    <time class="event-time" datetime="2016-04-01T19:00">{{ result.time }}</time>
                   </p>
                 </div>
               </div>
@@ -319,9 +314,7 @@
                     {{ result.title }}
                   </h3>
                   <p class="uk-text-meta uk-margin-remove-top">
-                    <time datetime="2016-04-01T19:00">
-                      {{ result.time }}
-                    </time>
+                    <time class="event-time" datetime="2016-04-01T19:00">{{ result.time }}</time>
                   </p>
                 </div>
               </div>
@@ -338,7 +331,7 @@
           <div class="uk-card uk-card-default uk-width-1-2@m" id="event9">
             <div class="uk-card-header">
               <div class="uk-grid-small uk-flex-middle" uk-grid>
-                <div class="uk-width-auto">
+                <div class="uk-width-1-8">
                   <img
                     class="uk-border-circle"
                     width="40"
@@ -346,7 +339,7 @@
                     src="api.event.image.jpg"
                   />
                 </div>
-                <div class="uk-width-expand">
+                <div class="uk-width-7-8">
                   <h3
                     class="uk-card-title uk-margin-remove-bottom"
                     id="event-title"
@@ -354,7 +347,7 @@
                     {{ result.title }}
                   </h3>
                   <p class="uk-text-meta uk-margin-remove-top">
-                    <time datetime="2016-04-01T19:00">{{ result.time }}</time>
+                    <time class="event-time" datetime="2016-04-01T19:00">{{ result.time }}</time>
                   </p>
                 </div>
               </div>
@@ -387,9 +380,7 @@
                     {{ result.title }}
                   </h3>
                   <p class="uk-text-meta uk-margin-remove-top">
-                    <time datetime="2016-04-01T19:00">
-                      {{ result.time }}
-                    </time>
+                    <time class="event-time" datetime="2016-04-01T19:00">{{ result.time }}</time>
                   </p>
                 </div>
               </div>
@@ -397,6 +388,7 @@
             <div class="uk-card-body" id="event-details">
               <p>
                 {{ result.details }}
+                
               </p>
             </div>
             <div class="uk-card-footer">
