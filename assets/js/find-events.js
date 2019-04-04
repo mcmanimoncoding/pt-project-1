@@ -24,6 +24,9 @@ $(_ => {
      * Caches the the selected object into local storage for later use.
      * Local storage entry is "savedEventData".
      *
+     * 
+     * 
+     * 
      * *NOTE*: Object is saved to local storage as JSON, do not forget to call `JSON.parse()`
      * 
      * @param  {Object} savedEventData Object that will be saved to local storage
