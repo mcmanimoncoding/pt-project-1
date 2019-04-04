@@ -4,8 +4,8 @@ html {
 
 body{
     background-image: linear-gradient(to right, #126F80, #f95151, #525E76); 
-    /*display: flex;*/
-    justify-content: center;
+    display: flex;
+    justify-content: center; 
     align-items: center;
     background-repeat: no-repeat;
     background-size: cover; 
@@ -17,15 +17,17 @@ body{
     color: #eeeeee;
     display: block;
     margin: auto;
-    /** border-radius: 0px 0px 0px 50px; **/
-    /*padding: 20px;*/ 
+    border-radius: 0px 0px 0px 50px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12),
                 0 2px 4px 0 rgba(0,0,0,0.08);
-    /** width: 200px; **/
-    /** height: 150px; **/
+    padding-top: -50px;
     
-
 }
+
+img {
+    float: left;
+}
+
 
 #event1, #event4, #event7, #event10 {
     background-color: #126F80;
@@ -37,4 +39,4 @@ body{
 
 #event3, #event6, #event9 {
     background-color: #f95151;
-}
+} 
