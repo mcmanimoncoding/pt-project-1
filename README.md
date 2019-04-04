@@ -5,6 +5,7 @@
 * Dan M.
 * Alex S.
 * Brandon B.
+* Juan P.
 
 ## Description
 

@@ -22,6 +22,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </head>
 
@@ -63,8 +64,8 @@
         var dataRef = firebase.database();
 
         // Initial Values
-        var name = "";
-        var email = "";
+        //var name = "";
+        //var email = "";
         var comment = "";
 
         $("#submitbtn").on("click", function (event) {
@@ -77,8 +78,8 @@
             // Code for the push
             dataRef.ref().push({
 
-                name: name,
-                email: email,
+                //name: name,
+                //email: email,
                 comment: comment
 
             });
@@ -89,7 +90,7 @@
 </body>
 <!-- Scripts -->
 <script defer src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 <script defer src=".\assets/js/make-a-match.js"></script>
 
 </html>
