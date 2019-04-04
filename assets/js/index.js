@@ -11,8 +11,8 @@ $("#search-button").on("click", function () {
 });
 
 $(function() {
-    $( "#datepicker-3" ).datepicker({
-       appendText:"(dd-mm-yy)",
+    $( "#datepicker-3").datepicker({
+       appendText:"",
        dateFormat:"dd-mm-yy",
        altField: "#datepicker-4",
        altFormat: "DD, d MM, yy"
