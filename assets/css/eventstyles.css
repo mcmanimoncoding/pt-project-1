@@ -22,11 +22,11 @@ body{
                 0 2px 4px 0 rgba(0,0,0,0.08);
     padding-top: -50px;
     
-}
+    
 
-img {
+/* img {
     float: left;
-}
+} */
 
 
 #event1, #event4, #event7, #event10 {
