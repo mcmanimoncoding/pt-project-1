@@ -119,9 +119,9 @@
                 // Log everything that's coming out of snapshot
                 console.log(childSnapshot.val().comment);
                 console.log(childSnapshot.val().emailInput);
-                $("#full-review-list").append("<div class='well'><span class='member-name'> " +
-                    childSnapshot.val().name +
-                    " </span><span class='emailInput'> " + childSnapshot.val().email +
+                
+                $("#full-review-list").append(
+                    " </span><span class='emailInput'> " + childSnapshot.val().emailInput +
                     " </span><span class='comment'> " + childSnapshot.val().comment +
                     " </span></div>");
                 // $('.carousel').carousel({
