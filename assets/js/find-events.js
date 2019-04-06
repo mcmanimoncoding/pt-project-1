@@ -5,7 +5,7 @@ $(_ => {
     let loadedData = JSON.parse(data);
 
     // TODO: Update query to use lng lat & radius
-    Ticketmaster.search({ postalCode: "85223" })
+    Ticketmaster.search({ postalCode: "85224" })
         .then(data => {
             let { _embedded: { events } } = data;
             events.forEach((rawEventData, index) => {
