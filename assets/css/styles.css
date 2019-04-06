@@ -17,6 +17,15 @@ body {
   color: #eeeeee;
 }
 
+#reviews-button {
+    border-color: #126f80;
+    background: none;
+}
+
+#reviews-button:hover {
+    background-color: #126f80;
+}
+
 .algolia-places {
     background: none;
 }
