@@ -8,6 +8,7 @@ $("#search-button").on("click", function () {
     newLocation = $("#location-input").val().trim();
     newDay = $("#datepicker-3").val();
     console.log(newLocation + " : " + newDay);
+    
 });
 
 $(function() {

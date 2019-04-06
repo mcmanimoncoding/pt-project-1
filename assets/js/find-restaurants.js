@@ -3,6 +3,7 @@ $(_ => {
     // Get loaded data from local storage
     let data = window.localStorage.getItem("indexData");
     let loadedData = JSON.parse(data);
+    
 
     // TODO: Update query to use lng lat & radius
     Zomato.search({ q: "seafood" })

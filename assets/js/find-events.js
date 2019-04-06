@@ -33,6 +33,7 @@ $(_ => {
      */
     function saveEventData(savedEventData) {
         window.localStorage.setItem("savedEventData", JSON.stringify(savedEventData));
+        console.log(savedEventData);
     }
 
 
