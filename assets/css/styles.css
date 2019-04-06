@@ -8,6 +8,9 @@ body {
     background-size: cover;
 }
 
+.ap-dropdown-menu {
+    margin-top: -40px;
+}
 
 #search-button {
   background-color: #126f80;
@@ -29,7 +32,7 @@ body {
 
 input::placeholder {
     font-style: italic;
-    color: #EEE;
+    color: #DDD;
 }
 
 input, #location-input {
