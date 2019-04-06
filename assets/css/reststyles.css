@@ -1,76 +1,116 @@
 html {
-    height: 100%;
-    /* color: #eeeeee !important; */
+  height: 100%;
+  /* color: #eeeeee !important; */
 }
 
-body{
-    background-image: linear-gradient(to right, #126F80, #f95151, #525E76); 
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    background-repeat: no-repeat;
-    background-size: cover; 
+body {
+  background-image: linear-gradient(#6c838b, #ccd3d9, #12406a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
+a,
+p,
+h1,
+h2,
+h3 {
+  color: #181b46;
+}
+
+.uk-card-default .uk-card-title {
+  color: #181b46;
+}
+
+.event-time {
+  color: #181b46;
+}
+
+.uk-button-text {
+  color: #181b46;
 }
 
 .uk-card {
-    color: #eeeeee;
-    display: block;
-    margin: auto;
-    border-radius: 0px 0px 0px 50px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12),
-                0 2px 4px 0 rgba(0,0,0,0.08);
-    margin-top: -50px;
-    padding-top: 50px;
-    
+  color: #eeeeee;
+  display: block;
+  margin: auto;
+  border-radius: 0px 0px 0px 50px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+  margin-top: -50px;
+  padding-top: 50px;
+}
+
+.uk-navbar-nav > li.uk-active > a {
+  color: #181b46;
+}
+
+#home-page.uk-navbar-container {
+  display: block;
+  margin: auto;
+  background-color: #ccd3d9;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+  border-radius: 0 0 0 15px;
 }
 
 img {
-    float: left;
+  float: left;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
 }
 
 #rest1 {
-    z-index: 1000;
+  z-index: 1000;
+  margin-top: 0px;
 }
 
 #rest2 {
-    z-index: 900;
+  z-index: 900;
 }
 #rest3 {
-    z-index: 800;
+  z-index: 800;
 }
 #rest4 {
-    z-index: 700;
+  z-index: 700;
 }
 #rest5 {
-    z-index: 600;
+  z-index: 600;
 }
 #rest6 {
-    z-index: 500;
+  z-index: 500;
 }
 #rest7 {
-    z-index: 400;
+  z-index: 400;
 }
 #rest8 {
-    z-index: 300;
+  z-index: 300;
 }
 #rest9 {
-    z-index: 200;
+  z-index: 200;
 }
 
 #rest10 {
-    z-index: 100;
+  z-index: 100;
 }
 
-
-#rest1, #rest4, #rest7, #rest10 {
-    background-color: #126F80;
+#rest1,
+#rest4,
+#rest7,
+#rest10 {
+  background-color: #bedae5;
 }
 
-#rest2, #rest5, #rest8 {
-    background-color: #525E76;
+#rest2,
+#rest5,
+#rest8 {
+  background-color: #adbed2;
 }
 
-#rest3, #rest6, #rest9 {
-    background-color: #f95151;
-} 
+#rest3,
+#rest6,
+#rest9 {
+  background-color: #afb3bc;
+}
