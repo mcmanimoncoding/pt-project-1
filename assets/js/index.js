@@ -11,6 +11,7 @@ $("#search-button").on("click", function () {
     
 });
 
+
 $(function() {
     $( "#datepicker-3").datepicker({
        appendText:"",
