@@ -16,8 +16,7 @@
   <meta name="rating" content="General" />
   <meta name="referrer" content="never" />
   <!-- Stylesheets -->
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.css"/>
   <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
@@ -30,21 +29,27 @@
   <script defer src="assets/js/index.js"></script>
 </head>
 
-<body class="w-100">
+<body>
   <div class="container-fluid" id="form-submit">
     <div class="row m-auto">
+      <div class="col-12 mb-3">
+        <h1 id="title-text" class="w-100 text-center text-light">Date Nights</h1>
+      </div>
       <div class="col-12">
         <form class="mx-2" autocomplete="off">
-          <div class="my-2 col-12">
-            <label class="ml-2" for="location-input">Where are you going?</label>
+          <div class="my-3 col-12">
+            <label class="ml-3 text-light" for="location-input">Where are you going?</label>
             <input class="w-100" type="search" id="location-input" placeholder="e.g. Phoenix, AZ" autocomplete="off">
           </div>
-          <div class="my-2 col-12">
-            <label class="ml-2" for="day-input">What Day?</label>
-            <input class="w-100" type="text" id="datepicker" autocomplete="off">
+          <div class="my-3 col-12">
+            <label class="ml-3 text-light" for="datepicker">What Day?</label>
+            <input class="w-100" type="text" id="datepicker" autocomplete="off" placeholder="e.g. mm-dd-yyy">
           </div>
-          <button class="btn btn-lg px-4 mx-4 my-2" id="search-button">
+          <button class="btn px-3 py-2 ml-3 my-5 d-inline-block" id="search-button">
             Let's Go on a Date!
+          </button>
+          <button class="btn px-3 py-2 ml-2 my-5 d-inline-block text-light" id="reviews-button">
+            Reviews
           </button>
         </form>
       </div>
