@@ -21,16 +21,389 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css" />
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/reststyles.css">
     <!-- Scripts -->
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script defer src="assets/js/cycle.js"></script>
     <script defer src="assets/js/zomato.js"></script>
-    <script defer src="assets/js/find-restaurants.js"></script>
+    <script defer src="assets/js/itinerary.html.js"></script>
 </head>
 <body>
-    <!-- TODO:
-        * Display restaurants one by one for users to select user tinder-like interactions
-    -->
+        <div class="container">
+                <div class="row">
+                  <div class="col-sm" id="rest-div">
+                    <div class="uk-card uk-card-default uk-width-1-2@m" id="rest1">
+                      <div class="uk-card-header">
+                        <div class="uk-grid-small uk-flex-middle" uk-grid>
+                          <div class="uk-width-auto">
+                            <img
+                              class="uk-card-media"
+                              width="100%"
+                              height="50%"
+                              src=""
+                            />
+                          </div>
+                          <div class="uk-width-expand">
+                            <h3
+                              class="uk-card-title uk-margin-remove-bottom"
+                              id= rest-title"
+                            >
+                              Event Title
+                            </h3>
+                            <p class="uk-text-meta uk-margin-remove-top">
+                              <time class= rest-time" datetime="2016-04-01T19:00">{{
+                                result.time
+                              }}</time>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="uk-card-body" id= rest-details">
+                        <p>
+                          {{ result.details }}
+                        </p>
+                      </div>
+                      <div class="uk-card-footer">
+                        <a href="itinerary.html" class="uk-button uk-button-text"
+                          >Choose this restaurant</a
+                        >
+                      </div>
+                    </div>
+                    <div class="uk-card uk-card-default uk-width-1-2@m" id="rest2">
+                      <div class="uk-card-header">
+                        <div class="uk-grid-small uk-flex-middle" uk-grid>
+                          <div class="uk-width-auto">
+                                  <img
+                                  class="uk-card-media"
+                                  width="100%"
+                                  height="50%"
+                                  src=""
+                                />
+                          </div>
+                          <div class="uk-width-expand">
+                            <h3
+                              class="uk-card-title uk-margin-remove-bottom"
+                              id= rest-title"
+                            >
+                              {{ result.title }}
+                            </h3>
+                            <p class="uk-text-meta uk-margin-remove-top">
+                              <time class= rest-time" datetime="2016-04-01T19:00">{{
+                                result.time
+                              }}</time>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="uk-card-body" id= rest-details">
+                        <p>
+                          {{ result.details }}
+                        </p>
+                      </div>
+                      <div class="uk-card-footer">
+                        <a href="itinerary.html" class="uk-button uk-button-text"
+                          >Choose this restaurant</a
+                        >
+                      </div>
+                    </div>
+                    <div class="uk-card uk-card-default uk-width-1-2@m" id="rest3">
+                      <div class="uk-card-header">
+                        <div class="uk-grid-small uk-flex-middle" uk-grid>
+                          <div class="uk-width-auto">
+                                  <img
+                                  class="uk-card-media"
+                                  width="100%"
+                                  height="50%"
+                                  src=""
+                                />
+                          </div>
+                          <div class="uk-width-expand">
+                            <h3
+                              class="uk-card-title uk-margin-remove-bottom"
+                              id= rest-title"
+                            >
+                              {{ result.title }}
+                            </h3>
+                            <p class="uk-text-meta uk-margin-remove-top">
+                              <time class= rest-time" datetime="2016-04-01T19:00">{{
+                                result.time
+                              }}</time>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="uk-card-body" id= rest-details">
+                        <p>
+                          {{ result.details }}
+                        </p>
+                      </div>
+                      <div class="uk-card-footer">
+                        <a href="itinerary.html" class="uk-button uk-button-text"
+                          >Choose this restaurant</a
+                        >
+                      </div>
+                    </div>
+                    <div class="uk-card uk-card-default uk-width-1-2@m" id="rest4">
+                      <div class="uk-card-header">
+                        <div class="uk-grid-small uk-flex-middle" uk-grid>
+                          <div class="uk-width-auto">
+                                  <img
+                                  class="uk-card-media"
+                                  width="100%"
+                                  height="50%"
+                                  src=""
+                                />
+                          </div>
+                          <div class="uk-width-expand">
+                            <h3
+                              class="uk-card-title uk-margin-remove-bottom"
+                              id= rest-title"
+                            >
+                              {{ result.title }}
+                            </h3>
+                            <p class="uk-text-meta uk-margin-remove-top">
+                              <time class= rest-time" datetime="2016-04-01T19:00">{{
+                                result.time
+                              }}</time>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="uk-card-body" id= rest-details">
+                        <p>
+                          {{ result.details }}
+                        </p>
+                      </div>
+                      <div class="uk-card-footer">
+                        <a href="itinerary.html" class="uk-button uk-button-text"
+                          >Choose this restaurant</a
+                        >
+                      </div>
+                    </div>
+                    <div class="uk-card uk-card-default uk-width-1-2@m" id="rest5">
+                      <div class="uk-card-header">
+                        <div class="uk-grid-small uk-flex-middle" uk-grid>
+                          <div class="uk-width-auto">
+                                  <img
+                                  class="uk-card-media"
+                                  width="100%"
+                                  height="50%"
+                                  src=""
+                                />
+                          </div>
+                          <div class="uk-width-expand">
+                            <h3
+                              class="uk-card-title uk-margin-remove-bottom"
+                              id= rest-title"
+                            >
+                              {{ result.title }}
+                            </h3>
+                            <p class="uk-text-meta uk-margin-remove-top">
+                              <time class= rest-time" datetime="2016-04-01T19:00">{{
+                                result.time
+                              }}</time>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="uk-card-body" id= rest-details">
+                        <p>
+                          {{ result.details }}
+                        </p>
+                      </div>
+                      <div class="uk-card-footer">
+                        <a href="itinerary.html" class="uk-button uk-button-text"
+                          >Choose this restaurant</a
+                        >
+                      </div>
+                    </div>
+                    <div class="uk-card uk-card-default uk-width-1-2@m" id="rest6">
+                      <div class="uk-card-header">
+                        <div class="uk-grid-small uk-flex-middle" uk-grid>
+                          <div class="uk-width-auto">
+                                  <img
+                                  class="uk-card-media"
+                                  width="100%"
+                                  height="50%"
+                                  src=""
+                                />
+                          </div>
+                          <div class="uk-width-expand">
+                            <h3
+                              class="uk-card-title uk-margin-remove-bottom"
+                              id= rest-title"
+                            >
+                              {{ result.title }}
+                            </h3>
+                            <p class="uk-text-meta uk-margin-remove-top">
+                              <time class= rest-time" datetime="2016-04-01T19:00">{{
+                                result.time
+                              }}</time>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="uk-card-body" id= rest-details">
+                        <p>
+                          {{ result.details }}
+                        </p>
+                      </div>
+                      <div class="uk-card-footer">
+                        <a href="itinerary.html" class="uk-button uk-button-text"
+                          >Choose this restaurant</a
+                        >
+                      </div>
+                    </div>
+                    <div class="uk-card uk-card-default uk-width-1-2@m" id="rest7">
+                      <div class="uk-card-header">
+                        <div class="uk-grid-small uk-flex-middle" uk-grid>
+                          <div class="uk-width-auto">
+                                  <img
+                                  class="uk-card-media"
+                                  width="100%"
+                                  height="50%"
+                                  src=""
+                                />
+                          </div>
+                          <div class="uk-width-expand">
+                            <h3
+                              class="uk-card-title uk-margin-remove-bottom"
+                              id= rest-title"
+                            >
+                              {{ result.title }}
+                            </h3>
+                            <p class="uk-text-meta uk-margin-remove-top">
+                              <time class= rest-time" datetime="2016-04-01T19:00">{{
+                                result.time
+                              }}</time>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="uk-card-body" id= rest-details">
+                        <p>
+                          {{ result.details }}
+                        </p>
+                      </div>
+                      <div class="uk-card-footer">
+                        <a href="itinerary.html" class="uk-button uk-button-text"
+                          >Choose this restaurant</a
+                        >
+                      </div>
+                    </div>
+                    <div class="uk-card uk-card-default uk-width-1-2@m" id="rest8">
+                      <div class="uk-card-header">
+                        <div class="uk-grid-small uk-flex-middle" uk-grid>
+                          <div class="uk-width-auto">
+                                  <img
+                                  class="uk-card-media"
+                                  width="100%"
+                                  height="50%"
+                                  src=""
+                                />
+                          </div>
+                          <div class="uk-width-expand">
+                            <h3
+                              class="uk-card-title uk-margin-remove-bottom"
+                              id= rest-title"
+                            >
+                              {{ result.title }}
+                            </h3>
+                            <p class="uk-text-meta uk-margin-remove-top">
+                              <time class= rest-time" datetime="2016-04-01T19:00">{{
+                                result.time
+                              }}</time>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="uk-card-body" id= rest-details">
+                        <p>
+                          {{ result.details }}
+                        </p>
+                      </div>
+                      <div class="uk-card-footer">
+                        <a href="itinerary.html" class="uk-button uk-button-text"
+                          >Choose this restaurant</a
+                        >
+                      </div>
+                    </div>
+                    <div class="uk-card uk-card-default uk-width-1-2@m" id="rest9">
+                      <div class="uk-card-header">
+                        <div class="uk-grid-small uk-flex-middle" uk-grid>
+                          <div class="uk-width-1-8">
+                                  <img
+                                  class="uk-card-media"
+                                  width="100%"
+                                  height="50%"
+                                  src=""
+                                />
+                          </div>
+                          <div class="uk-width-7-8">
+                            <h3
+                              class="uk-card-title uk-margin-remove-bottom"
+                              id= rest-title"
+                            >
+                              {{ result.title }}
+                            </h3>
+                            <p class="uk-text-meta uk-margin-remove-top">
+                              <time class= rest-time" datetime="2016-04-01T19:00">{{
+                                result.time
+                              }}</time>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="uk-card-body" id= rest-details">
+                        <p>
+                          {{ result.details }}
+                        </p>
+                      </div>
+                      <div class="uk-card-footer">
+                        <a href="itinerary.html" class="uk-button uk-button-text"
+                          >Choose this restaurant</a
+                        >
+                      </div>
+                    </div>
+                    <div class="uk-card uk-card-default uk-width-1-2@m" id="rest10">
+                      <div class="uk-card-header">
+                        <div class="uk-grid-small uk-flex-middle" uk-grid>
+                          <div class="uk-width-auto">
+                                  <img
+                                  class="uk-card-media"
+                                  width="100%"
+                                  height="50%"
+                                  src=""
+                                />
+                          </div>
+                          <div class="uk-width-expand">
+                            <h3
+                              class="uk-card-title uk-margin-remove-bottom"
+                              id= rest-title"
+                            >
+                              {{ result.title }}
+                            </h3>
+                            <p class="uk-text-meta uk-margin-remove-top">
+                              <time class= rest-time" datetime="2016-04-01T19:00">{{
+                                result.time
+                              }}</time>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="uk-card-body" id= rest-details">
+                        <p>
+                          {{ result.details }}
+                        </p>
+                      </div>
+                      <div class="uk-card-footer">
+                        <a href="itinerary.html" class="uk-button uk-button-text"
+                          >Choose this restaurant</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 </body>
 </html>
