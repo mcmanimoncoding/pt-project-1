@@ -22,27 +22,26 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
   <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css"/>
   <!-- Scripts -->
-  <script defer src="https://cdn.jsdelivr.net/npm/places.js@1.16.1"></script>
-  <script defer src="https://code.jquery.com/jquery-1.10.2.js"></script>
-  <script defer src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script defer src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/places.js@1.16.1"></script>
   <script defer src="assets/js/index.js"></script>
 </head>
 
-<body>
+<body class="w-100">
   <div class="container-fluid" id="form-submit">
-    <div class="row">
+    <div class="row m-auto">
       <div class="col-12">
-        <form class="mr-3 ml-4">
+        <form class="mx-2" autocomplete="off">
           <div class="my-2 col-12">
-            <label for="location-input">Where are you going?</label>
-            <input class="w-100" type="search" id="location-input" placeholder="e.g. Phoenix, AZ">
+            <label class="ml-2" for="location-input">Where are you going?</label>
+            <input class="w-100" type="search" id="location-input" placeholder="e.g. Phoenix, AZ" autocomplete="off">
           </div>
           <div class="my-2 col-12">
-            <label for="day-input">What Day?</label>
-            <input class="w-100" type="text" id="datepicker">
+            <label class="ml-2" for="day-input">What Day?</label>
+            <input class="w-100" type="text" id="datepicker" autocomplete="off">
           </div>
           <button class="btn btn-lg px-4 mx-4 my-2" id="search-button">
             Let's Go on a Date!
