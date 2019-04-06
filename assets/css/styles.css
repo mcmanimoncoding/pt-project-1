@@ -1,8 +1,8 @@
 body {
     background: url(../images/bg-image.jpg);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center; */
+    /* align-items: center; */
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -34,18 +34,32 @@ input, #location-input {
     color: #777;
     box-sizing: border-box;
     border-radius: 10px;
-    margin: 0 10px;
+    /* margin: 0 10px; */
 }
 
-#search-button {
+.btn {
     padding: 5px;
     border-radius: 10px;
 }
 
 .error-highlight {
     border: 3px solid #FF0000C0 !important;
+    animation-duration: 0.75s;
+    animation-iteration-count: 1;
 }
 
 label {
     display: block;
+}
+
+.container-fluid {
+    max-width: 600px;
+    margin: auto;
+    position: relative;
+    padding: 0;
+}
+
+#title-text {
+    position: relative;
+    top: -10px;
 }
