@@ -41,7 +41,7 @@ input, #location-input {
     outline: none;
     font-size: 18px;
     color: #777;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     border-radius: 10px;
     /* margin: 0 10px; */
 }
@@ -52,7 +52,9 @@ input, #location-input {
 }
 
 .error-highlight {
-    border: 3px solid #FF0000C0 !important;
+    /* box-sizing: border-box; */
+    box-shadow:inset 0 0 0 3px #FF0000C0;
+    /* border: 3px solid #FF0000C0 !important; */
     animation-duration: 0.75s;
     animation-iteration-count: 1;
 }
