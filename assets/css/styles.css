@@ -12,13 +12,9 @@ body {
     background-size: cover;
 }
 
-.uk-form-label {
+/* .uk-form-label {
     color: #eeeeee;
-}
-
-#form-submit {
-    margin: auto;
-}
+} */
 
 #search-button {
     background-color: #126f80;
@@ -47,7 +43,6 @@ body {
     -webkit-box-shadow: inset 0px 1px 1px 0px rgba(250, 250, 250, 2);
     -moz-box-shadow: inset 0px 1px 1px 0px rgba(250, 250, 250, .2);
     box-shadow: inset 0px 1px 1px 0px rgba(250, 250, 250, .2);
-    /* text-shadow: 1px -1px 0px #000; */
     filter: dropshadow(color=#000, offx=1, offy=-1);
     line-height: 30px;
     border-width: 1px 0 0 0;
@@ -151,28 +146,35 @@ ui-datepicker tbody td {
     -moz-box-shadow: inset 1px 1px 0px 0px rgba(250, 250, 250, .5);
 }
 
-.algolia-places {
-    background: none;
-}
-
 input::placeholder {
     font-style: italic;
     color: #EEE;
 }
 
-input, .uk-input, .ap-input {
-    padding: 12px;
+input, #location-input {
+    padding: 7px;
     border: none;
     outline: none;
     font-size: 18px;
     color: #777;
     box-sizing: border-box;
+    border-radius: 10px;
+    margin: 0 10px;
 }
 
 #search-button {
     padding: 5px;
+    border-radius: 10px;
 }
 
 .error-highlight {
     border: 3px solid #FF0000C0;
+}
+
+label {
+    display: block;
+}
+
+.container-fluid {
+    max-width: 600px;
 }
