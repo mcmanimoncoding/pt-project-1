@@ -13,12 +13,12 @@ body {
 } */
 
 #search-button {
-    background-color: #126f80;
-    color: #eeeeee;
+  background-color: #126f80;
+  color: #eeeeee;
 }
 
-.ap-dropdown-menu {
-    margin: 2px 10px;
+.algolia-places {
+    background: none;
 }
 
 input::placeholder {
