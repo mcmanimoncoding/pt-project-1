@@ -18,6 +18,10 @@ $(_ => {
                 $( ev + " #event-details").html("<a target='_blank' href='" + rawEventData.url+"'>Details for "+rawEventData.name+"' </a>");
 
             });
+        })
+        .catch(err => {
+            console.log("Ticketmaster error: " + err);
+            // TODO: Display error page to user
         });
     
     /**
