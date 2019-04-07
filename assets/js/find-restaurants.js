@@ -14,6 +14,10 @@ $(_ => {
         })
         .catch(err => {
             console.log("There was an error:", err);
+        })
+        .catch(err => {
+            console.log("Zomato error: " + err);
+            // TODO: Display error page to user
         });
     
     /**

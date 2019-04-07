@@ -1,165 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Date Night for Dummies - Itinerary</title>
-    <meta name="keywords" content="date,night,events,restaurant,eat,food,discover,find,search">
-    <meta name="description" content="TODO: Add description here!">
-    <meta name="subject" content="Date Night">
-    <meta name="language" content="en">
-    <meta name="robots" content="index,follow">
-    <meta name="googlebot" content="index,follow">
-    <meta name="classification" content="search">
-    <meta name="rating" content="General">
-    <meta name="referrer" content="never">
+    <meta
+      name="keywords"
+      content="date,night,events,restaurant,eat,food,discover,find,search"
+    />
+    <meta name="description" content="TODO: Add description here!" />
+    <meta name="subject" content="Date Night" />
+    <meta name="language" content="en" />
+    <meta name="robots" content="index,follow" />
+    <meta name="googlebot" content="index,follow" />
+    <meta name="classification" content="search" />
+    <meta name="rating" content="General" />
+    <meta name="referrer" content="never" />
     <!-- Stylesheets -->
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css" />
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css"
+    />
     <!-- <link rel="stylesheet" type="text/css" href="assets/css/itinerary.css"> -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
 
-</head>
-
-<body>
+  <body>
     <!-- TODO:
         * Collect users chosen event and restaurant, display them to the user
         * Show end-user links to booking restaurant/ordering event tickets
     -->
-    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
-            <div class="uk-card-media-left uk-cover-container">
-                <img src="images/light.jpg" alt="" uk-cover>
-                <canvas width="600" height="400"></canvas>
-            </div>
-            <div>
-                <div class="uk-card-body">
-                    <h3 class="uk-card-title">Media Left</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
-            <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
-                <img src="images/light.jpg" alt="" uk-cover>
-                <canvas width="600" height="400"></canvas>
-            </div>
-            <div>
-                <div class="uk-card-body">
-                    <h3 class="uk-card-title">Media Right</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                </div>
-            </div>
-        </div>
-    <!-- Success Stories HTML -->
     <div class="container">
-        <div class="jumbotron jumbotron-fluid bg-grey">
-            <h2 class="center-text">Success Stories</h2>
+      <div class="row">
+        <div class="col-sm">
         </div>
+        <div class="col-sm">
+                <nav class="navbar navbar-light bg-light">
+                        <span class="navbar-brand mb-0 h1">Great Date!</span>
+                      </nav>
+          <div class="card" style="width: 21.5rem;">
+            <img class="card-img-top" src="..." alt="Card image cap" />
+            <div class="card-body">
+              <h5 class="card-title">{{Event.title}}</h5>
+              <p class="card-text">
+                {{Event.details}}
+              </p>
+              <a href="#" class="btn btn-primary">Buy Tickets Here</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+        </div>
+      </div>
     </div>
 
-    <div>
-        <form class="container block">
-            <div class="form-group">
-                <label for="email-input">Email address</label>
-                <input type="email" class="form-control" id="email-input" placeholder="name@example.com">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+        </div>
+        <div class="col-sm">
+          <div class="card" style="width: 21.5rem;">
+            <img class="card-img-top" src="..." alt="Card image cap" />
+            <div class="card-body">
+              <h5 class="card-title">{{restaurant.title}}</h5>
+              <p class="card-text">
+                {{restaurant.details}}
+              </p>
+              <a href="#" class="btn btn-primary">Reservations</a>
             </div>
-            <div class="form-group">
-                <label for="comment">Have your own success story? Share it with us!</label>
-                <textarea class="form-control" id="comment" rows="3"></textarea>
-            </div>
-            <button type="button" id="submitbtn" class="btn btn-success">Success!</button>
-            <div class="col-lg-12">
-                <div class="card">
-                    <div class="card-header">
-                        What others are saying
+          </div>
+        </div>
+        <div class="col-sm">
+        </div>
+      </div>
+    </div>
+
+    <!-- Success Stories HTML -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+        </div>
+        <div class="col-sm">
+                <nav class="navbar navbar-light bg-light">
+                        <span class="navbar-brand mb-0 h1">See Success Stories</span>
+                      </nav>
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                            <div class="card" style="width: 21.5rem;">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Card title</h5>
+                                      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                      <p class="card-text">
+                                        Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.
+                                      </p>
+                                    </div>
+                                  </div>
                     </div>
-                    <div class="card-body">
-                        <div id="full-review-list"></div>
+                    <div class="carousel-item">
+                            <div class="card" style="width: 21.5rem;">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Card title</h5>
+                                      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                      <p class="card-text">
+                                        Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.
+                                      </p>
+                                    </div>
+                                  </div>
+                    </div>
+                    <div class="carousel-item">
+                            <div class="card" style="width: 21.5rem;">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Card title</h5>
+                                      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                      <p class="card-text">
+                                        Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.
+                                      </p>
+                                    </div>
+                                  </div>
                     </div>
                 </div>
             </div>
-        </form>
+          <div>
+                <nav class="navbar navbar-light bg-light">
+                        <span class="navbar-brand mb-0 h1">Share Your Stories below!</span>
+                      </nav>
+              <div class="form-group">
+                <label for="email-input">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email-input"
+                  placeholder="name@example.com"
+                />
+              </div>
+              <div class="form-group">
+                <label for="comment"
+                  >Let us hear it!</label
+                >
+                <textarea class="form-control" id="comment" rows="3"></textarea>
+              </div>
+              <button type="button" id="submitbtn" class="btn btn-success">
+                Success!
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="col-sm">
+        </div>
+      </div>
     </div>
-
-    <!--<div id="carouselExampleSlidesOnly" class="carousel slide" data - ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-100" src=".../800x400?auto=yes&bg=777&fg=555&text=First slide" alt="First slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src=".../800x400?auto=yes&bg=666&fg=444&text=Second slide" alt="Second slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src=".../800x400?auto=yes&bg=555&fg=333&text=Third slide" alt="Third slide">
-            </div>
-        </div>-->
 
     <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
     <script>
+      // Initialize Firebase
 
-        // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyB7m18QCPh-Hwc5iayRJfByrUvLo2s2Cl0",
+        authDomain: "kelly-kapoor.firebaseapp.com",
+        databaseURL: "https://kelly-kapoor.firebaseio.com",
+        projectId: "kelly-kapoor",
+        storageBucket: "kelly-kapoor.appspot.com",
+        messagingSenderId: "298814023535"
+      };
 
-        var config = {
-            apiKey: "AIzaSyB7m18QCPh-Hwc5iayRJfByrUvLo2s2Cl0",
-            authDomain: "kelly-kapoor.firebaseapp.com",
-            databaseURL: "https://kelly-kapoor.firebaseio.com",
-            projectId: "kelly-kapoor",
-            storageBucket: "kelly-kapoor.appspot.com",
-            messagingSenderId: "298814023535"
-        };
+      firebase.initializeApp(config);
 
-        firebase.initializeApp(config);
+      var dataRef = firebase.database();
 
-        var dataRef = firebase.database();
+      // Initial Values
+      //var name = "";
+      var email = "";
+      var comment = "";
 
-        // Initial Values
-        //var name = "";
-        var email = "";
-        var comment = "";
+      $("#submitbtn").on("click", function(event) {
+        event.preventDefault();
 
-        $("#submitbtn").on("click", function (event) {
-            event.preventDefault();
+        //name = $("#name-input").val().trim();
+        emailInput = $("#email-input")
+          .val()
+          .trim();
+        comment = $("#comment")
+          .val()
+          .trim();
 
-            //name = $("#name-input").val().trim();
-            emailInput = $("#email-input").val().trim();
-            comment = $("#comment").val().trim();
-
-            // Code for the push
-            dataRef.ref().push({
-
-                //name: name,
-                emailInput: emailInput,
-                comment: comment
-
-            });
-            // Firebase watcher + initial loader HINT: This code behaves similarly to .on("value")
-            dataRef.ref().on("child_added", function (childSnapshot) {
-
-                // Log everything that's coming out of snapshot
-                console.log(childSnapshot.val().comment);
-                console.log(childSnapshot.val().emailInput);
-                
-                $("#full-review-list").append(
-                    " </span><span class='emailInput'> " + childSnapshot.val().emailInput +
-                    " </span><span class='comment'> " + childSnapshot.val().comment +
-                    " </span></div>");
-                // $('.carousel').carousel({
-                //     interval: 2000
-
-            })
-
+        // Code for the push
+        dataRef.ref().push({
+          //name: name,
+          emailInput: emailInput,
+          comment: comment
         });
+        // Firebase watcher + initial loader HINT: This code behaves similarly to .on("value")
+        dataRef.ref().on("child_added", function(childSnapshot) {
+          // Log everything that's coming out of snapshot
+          console.log(childSnapshot.val().comment);
+          console.log(childSnapshot.val().emailInput);
+
+          $("#full-review-list").append(
+            " </span><span class='emailInput'> " +
+              childSnapshot.val().emailInput +
+              " </span><span class='comment'> " +
+              childSnapshot.val().comment +
+              " </span></div>"
+          );
+          // $('.carousel').carousel({
+          //     interval: 2000
+        });
+      });
     </script>
-</body>
-<!-- Scripts -->
-<script defer src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+  </body>
+  <!-- Scripts -->
+  <script
+    defer
+    src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"
+  ></script>
 
-<script defer src=".\assets/js/make-a-match.js"></script>
-
+  <script defer src=".\assets/js/make-a-match.js"></script>
 </html>

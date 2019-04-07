@@ -163,3 +163,31 @@ ui-datepicker tbody td {
   -webkit-box-shadow: inset 1px 1px 0px 0px rgba(250, 250, 250, 0.5);
   -moz-box-shadow: inset 1px 1px 0px 0px rgba(250, 250, 250, 0.5);
 }
+
+.algolia-places {
+  background: none;
+}
+
+input::placeholder {
+  font-style: italic;
+  color: #eee;
+}
+
+input,
+.uk-input,
+.ap-input {
+  padding: 12px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  color: #777;
+  box-sizing: border-box;
+}
+
+#search-button {
+  padding: 5px;
+}
+
+.error-highlight {
+  border: 3px solid #ff0000c0;
+}

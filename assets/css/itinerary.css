@@ -1,8 +1,8 @@
 html {
-    height: 100%;
+  height: 100%;
 }
 
-body {
+/* body {
     background: url(../images/bg-image.jpg);
     display: flex;
     justify-content: center;
@@ -10,5 +10,4 @@ body {
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
+} */
