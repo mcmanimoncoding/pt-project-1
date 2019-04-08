@@ -12,18 +12,20 @@ body {
   margin-top: -40px;
 }
 
+/* #6c838b, #ccd3d9, #12406a, #181b46, #bedae5, #adbed2; #afb3bc*/
+
 #search-button {
-  background-color: #126f80;
-  color: #eeeeee;
+  background-color: #bedae5;
+  color: #181b46;
 }
 
 #reviews-button {
-  border-color: #126f80;
+  border-color: #6c838b;
   background: none;
 }
 
 #reviews-button:hover {
-  background-color: #126f80;
+  background-color: #6c838b;
 }
 
 .algolia-places {
