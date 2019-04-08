@@ -21,7 +21,11 @@ $(_ => {
         .catch(err => {
             console.log("Zomato error: " + err);
             // TODO: Display error page to user
-        });
+        })
+        .finally(_ => {
+            $("#find-restaurants-main-content").removeClass("d-none");
+            $("#find-restaurants-loading-display").remove();
+        })
     
     /**
      * Caches the the given object into local storage for later use.

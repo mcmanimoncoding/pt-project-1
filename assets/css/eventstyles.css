@@ -116,3 +116,15 @@ img {
 #event9 {
   background-color: #afb3bc;
 }
+
+#find-events-loading-display {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#find-events-loading-display .spinner-border {
+  width: 5rem;
+  height: 5rem;
+}

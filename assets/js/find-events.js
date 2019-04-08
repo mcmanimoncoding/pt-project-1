@@ -9,8 +9,7 @@ $(_ => {
             console.log(data);
             if (data.page.totalElements < 10) {
                 // TODO: Display page saying results could not be found in this location
-                console.error("There was not enough element pulled to display to the page!");
-                return;
+                throw new RangeError("There was not enough element pulled to display to the page!");
             }
             let {
                 _embedded: {
@@ -45,7 +44,11 @@ $(_ => {
         .catch(err => {
             console.log("Ticketmaster error: " + err);
             // TODO: Display error page to user
-        });
+        })
+        .finally(_ => {
+            $("#find-events-main-content").removeClass("d-none");
+            $("#find-events-loading-display").remove();
+        })
 
     /**
      * Caches the the selected object into local storage for later use.
