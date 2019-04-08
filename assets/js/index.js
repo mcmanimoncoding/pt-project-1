@@ -8,9 +8,6 @@ $("#search-button").on("click", function () {
   newDay = $("#datepicker").val();
 });
 
-$(function () {
-});
-
 // Code stub from https://github.com/daneden/animate.css
 function animate(element, animationName, callback) {
   const node = document.querySelector(element)
@@ -51,7 +48,7 @@ $(function () {
     $(".ap-input-icon").css({ display: 'none' });
   })
 
-  $(".ap-input-icon").css({display: 'none'});
+  $(".ap-input-icon").addClass("d-none");
 
   $("#search-button").on("click", function () {
     event.preventDefault();
