@@ -40,7 +40,21 @@ $(_ => {
         .finally(_ => {
             $("#find-restaurants-main-content").removeClass("d-none");
             $("#find-restaurants-loading-display").remove();
-        })
+        });
+
+        $(res + " button").on("click", function (event) {
+            event.preventDefault();
+            var savedRestData = {
+                restaurant: {
+                    restName: rawRestaurantData.restaurant.name,
+                    restAddress: rawEventData.restaurant.location.address,
+                    restImg: rawEventData.restaurant.featured_image,
+                    restCuisine: rawEventData._embedded.venues["0"].location,
+                }
+            }
+            saveEventData(savedEventData);
+            window.open("./find-restaurants.html", "_self");
+        });
     
     /**
      * Caches the the given object into local storage for later use.
