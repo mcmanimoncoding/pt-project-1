@@ -37,7 +37,7 @@ $(_ => {
                     console.log(savedEventData);
                     saveEventData(savedEventData);
                     console.log("savedEventData");
-                    window.location = "find-restaurants.html"
+                    window.location = "`find-restaurants.html"
                 });
             });
         })
