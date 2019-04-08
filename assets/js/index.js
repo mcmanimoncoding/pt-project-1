@@ -36,15 +36,15 @@ $(function () {
     container: document.querySelector('#location-input')
   });
 
-  let lat, lng;
+  let postalCode;
+
   placesAutocomplete.on("change", event => {
-    lat = event.suggestion.latlng.lat;
-    lng = event.suggestion.latlng.lng;
+    postalCode = event.suggestion.postcode;
     $(".ap-input-icon").css({ display: 'none' });
   });
   
   placesAutocomplete.on("clear", event => {
-    lat = undefined; lng = undefined;
+    postalCode = undefined;
     $(".ap-input-icon").css({ display: 'none' });
   })
 
@@ -54,8 +54,8 @@ $(function () {
     event.preventDefault();
     let locationName = $("#location-input").val();
     let date = $("#datepicker").val();
-    if (lat && lng && locationName && date) {
-      let transferData = { locationName, lat, lng, date };
+    if (postalCode && locationName && date) {
+      let transferData = { locationName, postalCode, date };
       window.localStorage.setItem("indexData", JSON.stringify(transferData));
       window.open("./find-events.html", "_self");
     } else {
