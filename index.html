@@ -1,60 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Date Night for Dummies - Find your perfect date night!</title>
+    <meta
+      name="keywords"
+      content="date,night,events,restaurant,eat,food,discover,find,search"
+    />
+    <meta name="description" content="TODO: Add description here!" />
+    <meta name="subject" content="Date Night" />
+    <meta name="language" content="en" />
+    <meta name="robots" content="index,follow" />
+    <meta name="googlebot" content="index,follow" />
+    <meta name="classification" content="search" />
+    <meta name="rating" content="General" />
+    <meta name="referrer" content="never" />
+    <!-- Stylesheets -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css"
+    />
+    <!-- Scripts -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+    ></script>
+    <script defer src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/places.js@1.16.1"></script>
+    <script defer src="assets/js/index.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Date Night for Dummies - Find your perfect date night!</title>
-  <meta name="keywords" content="date,night,events,restaurant,eat,food,discover,find,search" />
-  <meta name="description" content="TODO: Add description here!" />
-  <meta name="subject" content="Date Night" />
-  <meta name="language" content="en" />
-  <meta name="robots" content="index,follow" />
-  <meta name="googlebot" content="index,follow" />
-  <meta name="classification" content="search" />
-  <meta name="rating" content="General" />
-  <meta name="referrer" content="never" />
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.css"/>
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
-  <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css"/>
-  <!-- Scripts -->
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script defer src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/places.js@1.16.1"></script>
-  <script defer src="assets/js/index.js"></script>
-</head>
-
-<body>
-  <div class="container-fluid" id="form-submit">
-    <div class="row m-auto">
-      <div class="col-12 mb-3">
-        <h1 id="title-text" class="w-100 text-center text-light">Date Nights</h1>
-      </div>
-      <div class="col-12">
-        <form class="mx-2" autocomplete="off">
-          <div class="my-3 col-12">
-            <label class="ml-3 text-light" for="location-input">Where are you going?</label>
-            <input class="w-100" type="search" id="location-input" placeholder="e.g. Phoenix, AZ" autocomplete="off">
-          </div>
-          <div class="my-3 col-12">
-            <label class="ml-3 text-light" for="datepicker">What Day?</label>
-            <input class="w-100" type="text" id="datepicker" autocomplete="off" placeholder="e.g. mm-dd-yyy">
-          </div>
-          <button class="btn px-3 py-2 ml-3 my-5 d-inline-block" id="search-button">
-            Let's Go on a Date!
-          </button>
-          <button class="btn px-3 py-2 ml-2 my-5 d-inline-block text-light" id="reviews-button">
-            Reviews
-          </button>
-        </form>
+  <body>
+    <div class="container-fluid" id="form-submit">
+      <div class="row m-auto">
+        <div class="col-12 mb-3">
+          <h1 id="title-text" class="w-100 text-center text-light">
+            Date Nights
+          </h1>
+        </div>
+        <div class="col-12">
+          <form class="mx-2" autocomplete="off">
+            <div class="my-3 col-12">
+              <label class="ml-3 text-light" for="location-input"
+                >Where are you going?</label
+              >
+              <input
+                class="w-100"
+                type="search"
+                id="location-input"
+                placeholder="e.g. Phoenix, AZ"
+                autocomplete="off"
+              />
+            </div>
+            <div class="my-3 col-12">
+              <label class="ml-3 text-light" for="datepicker">What Day?</label>
+              <input
+                class="w-100"
+                type="text"
+                id="datepicker"
+                autocomplete="off"
+                placeholder="e.g. mm-dd-yyy"
+              />
+            </div>
+            <button
+              class="btn px-3 py-2 ml-3 my-5 d-inline-block"
+              id="search-button"
+            >
+              Let's Go on a Date!
+            </button>
+            <button
+              class="btn px-3 py-2 ml-2 my-5 d-inline-block text-light"
+              id="reviews-button"
+            >
+              Reviews
+            </button>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
-</body>
-
+  </body>
 </html>
