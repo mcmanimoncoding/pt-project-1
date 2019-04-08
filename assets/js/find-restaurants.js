@@ -8,11 +8,26 @@ $(_ => {
     console.log("Zomato");
     Zomato.search({ lng: loadedData.lng, lat: loadedData.lat })
         .then(response => {
+            console.log(response);
             let { restaurants, results_found: resultCount } = response;
             console.log(response);
-            restaurants.forEach(rawRestaurantEvent => {
-                console.log(rawRestaurantEvent);
+            restaurants.forEach((rawRestaurantData, index) => {
+                console.log(rawRestaurantData);
                 // TODO: Add code for displaying restaurants to the end-user and handling restaurant selection here
+                let res = "#rest" + (index + 1);
+
+                console.log(rawRestaurantData.restaurant.photos_url);
+
+                $(res +" .uk-card-media").attr("src", rawRestaurantData.restaurant.featured_image);
+
+                $(res+" #rest-title").text(rawRestaurantData.restaurant.name);
+
+                $(res+"#rest-phone").text(rawRestaurantData.restaurant)
+
+
+                
+
+
             });
         })
         .catch(err => {
