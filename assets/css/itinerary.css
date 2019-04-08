@@ -68,3 +68,15 @@ img {
 #card-text {
   margin-bottom: 20px;
 }
+
+#itinerary-loading-display {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#itinerary-loading-display .spinner-border {
+  width: 5rem;
+  height: 5rem;
+}

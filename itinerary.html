@@ -19,8 +19,7 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css" />
   <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css" />
-  <!-- <link rel="stylesheet" type="text/css" href="assets/css/itinerary.css"> -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"/>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css" />
   <link rel="stylesheet" type="text/css" href="assets/css/itinerary.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -28,117 +27,114 @@
 </head>
 
 <body>
-  <!-- TODO:
-        * Collect users chosen event and restaurant, display them to the user
-        * Show end-user links to booking restaurant/ordering event tickets
-    -->
-  <div class="container">
-    <div class="row">
-      <div class="col-sm">
-      </div>
-      <div class="col-sm">
-        <nav class="navbar" id="navbar1">
-          <span class="navbar-brand mb-0 h1">Great Date!</span>
-        </nav>
-        <div class="card" id="event-card" style="width: 21.5rem;" id="event-chosen">
-          <img class="card-img-top" src="assets/images/bg-image.jpg" alt="Card image cap" />
-          <div class="card-body">
-            <h5 class="card-title">{{Event.title}}</h5>
-            <p class="card-text">
-              {{Event.details}}
-            </p>
-            <a href="#" class="btn btn-light" id="event-button">Tickets</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm">
-      </div>
-    </div>
+  <div id="itinerary-loading-display">
   </div>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-sm">
-      </div>
-      <div class="col-sm">
-        <div class="card" id="rest-card" style="width: 21.5rem;" id="rest-chosen">
-          <img class="card-img-top" src="assets/images/rest-2.jpeg" alt="Card image cap" />
-          <div class="card-body">
-            <h5 class="card-title">{{restaurant.title}}</h5>
-            <p class="card-text">
-              {{restaurant.details}}
-            </p>
-            <a href="#" class="btn btn-light" id="rest-button">Reservations</a>
-          </div>
+  <div class="d-none" id="itinerary-main-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
         </div>
-      </div>
-      <div class="col-sm">
-      </div>
-    </div>
-  </div>
-
-  <!-- Success Stories HTML -->
-
-  <div class="container">
-    <div class="row">
-      <div class="col-sm">
-      </div>
-      <div class="col-sm">
-        <nav class="navbar" id="navbar2">
-          <span class="navbar-brand mb-0 h1">See Our Success Stories</span>
-        </nav>
-        <div id="success-stories" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="card" id="card1" style="width: 21.5rem;">
-                <div class="card-body" id="success-card">
-                  <p class="card-text" id="card-01">
-                  </p>
-                  <br>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="card" id="card2" style="width: 21.5rem;">
-                <div class="card-body">
-                  <p class="card-text">
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="card" id="card3" style="width: 21.5rem;">
-                <div class="card-body">
-                  <p class="card-text">
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <nav class="navbar" id="navbar3">
-            <span class="navbar-brand mb-0 h1">Share Your Stories below!</span>
+        <div class="col-sm">
+          <nav class="navbar" id="navbar1">
+            <span class="navbar-brand mb-0 h1">Great Date!</span>
           </nav>
-          <div class="form-group" id="success-story">
-            <label for="email-input">Email address</label>
-            <input type="email" class="form-control" id="email-input" placeholder="name@example.com" />
+          <div class="card" id="event-card" style="width: 21.5rem;" id="event-chosen">
+            <img class="card-img-top" src="assets/images/bg-image.jpg" alt="Card image cap" />
+            <div class="card-body">
+              <h5 class="card-title">{{Event.title}}</h5>
+              <p class="card-text">
+                {{Event.details}}
+              </p>
+              <a href="#" class="btn btn-light" id="event-button">Tickets</a>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="comment">Let us hear it!</label>
-            <textarea class="form-control" id="comment" rows="3"></textarea>
-          </div>
-          <button type="button" id="submitbtn" class="btn btn-light">
-            Success!
-          </button>
-          </form>
+        </div>
+        <div class="col-sm">
         </div>
       </div>
-      <div class="col-sm">
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+        </div>
+        <div class="col-sm">
+          <div class="card" id="rest-card" style="width: 21.5rem;" id="rest-chosen">
+            <img class="card-img-top" src="assets/images/rest-2.jpeg" alt="Card image cap" />
+            <div class="card-body">
+              <h5 class="card-title">{{restaurant.title}}</h5>
+              <p class="card-text">
+                {{restaurant.details}}
+              </p>
+              <a href="#" class="btn btn-light" id="rest-button">Reservations</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+        </div>
+      </div>
+    </div>
+
+    <!-- Success Stories HTML -->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+        </div>
+        <div class="col-sm">
+          <nav class="navbar" id="navbar2">
+            <span class="navbar-brand mb-0 h1">See Our Success Stories</span>
+          </nav>
+          <div id="success-stories" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="card" id="card1" style="width: 21.5rem;">
+                  <div class="card-body" id="success-card">
+                    <p class="card-text" id="card-01">
+                    </p>
+                    <br>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card" id="card2" style="width: 21.5rem;">
+                  <div class="card-body">
+                    <p class="card-text">
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card" id="card3" style="width: 21.5rem;">
+                  <div class="card-body">
+                    <p class="card-text">
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <nav class="navbar" id="navbar3">
+              <span class="navbar-brand mb-0 h1">Share Your Stories below!</span>
+            </nav>
+            <div class="form-group" id="success-story">
+              <label for="email-input">Email address</label>
+              <input type="email" class="form-control" id="email-input" placeholder="name@example.com" />
+            </div>
+            <div class="form-group">
+              <label for="comment">Let us hear it!</label>
+              <textarea class="form-control" id="comment" rows="3"></textarea>
+            </div>
+            <button type="button" id="submitbtn" class="btn btn-light">
+              Success!
+            </button>
+            </form>
+          </div>
+        </div>
+        <div class="col-sm">
+        </div>
       </div>
     </div>
   </div>
-
   <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
   <script>
     // Initialize Firebase

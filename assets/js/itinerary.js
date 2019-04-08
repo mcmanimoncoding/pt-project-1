@@ -7,7 +7,6 @@ let savedEventData = JSON.parse(window.localStorage.getItem("savedEventData"));
 
 // Called when the document loads
 $(_ => {
-
     if (savedEventData.event) {
         let { event } = savedEventData;
         $("#event-card .card-title").text(event.name);
@@ -16,7 +15,6 @@ $(_ => {
         $("#event-card a").attr("href", event.eventDetails);
         $("#event-card a").attr("target", "_blank");
     }
-
     if (true) {
         // let someVar;
         $("#rest-card .card-title").text("Name");
@@ -25,7 +23,6 @@ $(_ => {
         // $("#rest-card a").attr("href", link);
         $("#rest-card a").attr("target", "_blank");
     }
-
-    // $("#itinerary-main-content").removeClass("d-none");
-    // $("#loading-display").remove();
+    $("#itinerary-main-content").removeClass("d-none");
+    $("#itinerary-loading-display").remove();
 });
