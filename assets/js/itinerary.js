@@ -15,12 +15,12 @@ $(_ => {
         $("#event-card a").attr("href", event.eventDetails);
         $("#event-card a").attr("target", "_blank");
     }
-    if (true) {
-        // let someVar;
-        $("#rest-card .card-title").text("Name");
-        $("#rest-card .card-text").text("Desc");
-        // $("#rest-card .card-img-top").attr("src", url);
-        // $("#rest-card a").attr("href", link);
+    if (savedRestaurantData) {
+        console.log(savedRestaurantData);
+        $("#rest-card .card-title").text(savedRestaurantData.restName);
+        $("#rest-card .card-text").text(savedRestaurantData.restAddress);
+        $("#rest-card .card-img-top").attr("src", savedRestaurantData.restImg);
+        $("#rest-card a").attr("href", savedRestaurantData.restURL);
         $("#rest-card a").attr("target", "_blank");
     }
     $("#itinerary-main-content").removeClass("d-none");
