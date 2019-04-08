@@ -1,12 +1,12 @@
-$(_ => {
-    // Get loaded data from local storage
-    let data = window.localStorage.getItem("indexData");
-    let loadedData = JSON.parse(data);
+// Get loaded data from local storage
+let data = window.localStorage.getItem("indexData");
+if (!data) window.open("./", "_self");
+let loadedData = JSON.parse(data);
 
-    // TODO: Update query to use lng lat & radius
-    Ticketmaster.search({
-            postalCode: "85224"
-        })
+// TODO: Filter data of dupes and by date
+
+$(_ => {
+    Ticketmaster.search({ postalCode: loadedData.postalCode })
         .then(data => {
             let {
                 _embedded: {
@@ -15,7 +15,6 @@ $(_ => {
             } = data;
             events.forEach((rawEventData, index) => {
                 // TODO: Add code for displaying events to the end-user and handling event selection here
-                console.log(rawEventData);
                 let ev = "#event" + (index + 1);
                 $(ev + " .uk-card-media").attr("src", rawEventData.images["0"].url);
                 $(ev + " #event-title").text(rawEventData.name);
@@ -49,12 +48,7 @@ $(_ => {
     /**
      * Caches the the selected object into local storage for later use.
      * Local storage entry is "savedEventData".
-     *
-     * 
-     * 
-     * 
-     * *NOTE*: Object is saved to local storage as JSON, do not forget to call `JSON.parse()`
-     * 
+     * *NOTE*: Object is saved to local storage as JSON, do not forget to call `JSON.parse()` when calling getItem
      * @param  {Object} savedEventData Object that will be saved to local storage
      */
     function saveEventData(savedEventData) {
@@ -62,7 +56,5 @@ $(_ => {
         // console.log(savedEventData);
     }
 
-
     // TODO: Add "loading" animation to page before results are displayed
-
-})
+});
