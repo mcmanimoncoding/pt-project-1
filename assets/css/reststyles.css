@@ -114,3 +114,15 @@ img {
 #rest9 {
   background-color: #afb3bc;
 }
+
+#find-restaurants-loading-display {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#find-restaurants-loading-display .spinner-border {
+  width: 5rem;
+  height: 5rem;
+}

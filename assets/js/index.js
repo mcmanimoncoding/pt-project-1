@@ -36,18 +36,21 @@ $(function () {
     container: document.querySelector('#location-input')
   });
 
-  let postalCode, lng, lat;
+  let lng, lat, city, state, countryCode;
 
   placesAutocomplete.on("change", event => {
-    postalCode = event.suggestion.postcode; // FIXME: Certain postcodes are empty
     lng = event.suggestion.latlng.lng;
     lat = event.suggestion.latlng.lat;
-    console.log(event.suggestion);
+    countryCode = event.suggestion.countryCode;
+    city = event.suggestion.name;
+    state = event.suggestion.highlight.administrative;
+    console.log(lat, lng, city, countryCode, state);
     $(".ap-input-icon").css({ display: 'none' });
   });
   
   placesAutocomplete.on("clear", event => {
-    postalCode = undefined; lng = undefined; lat = undefined;
+    lng = undefined; lat = undefined;
+    countryCode = undefined; city = undefined; state = undefined;
     $(".ap-input-icon").css({ display: 'none' });
   })
 
@@ -57,13 +60,13 @@ $(function () {
     event.preventDefault();
     let locationName = $("#location-input").val();
     let date = $("#datepicker").val();
-    if (postalCode && locationName && lat && lng && date) {
-      let transferData = { locationName, postalCode, lng, lat, date };
+    if (locationName && lat && lng && city && countryCode && state && date) {
+      let transferData = { locationName, lng, lat, date, city, state, countryCode };
       window.localStorage.setItem("indexData", JSON.stringify(transferData));
       window.open("./find-events.html", "_self");
     } else {
       // TODO: Display error for incorrectly chosen location.
-      if (!postalCode || !lng || !lat || !locationName) {
+      if (!city || !countryCode || !state || !lng || !lat || !locationName) {
         $("#location-input").addClass('error-highlight');
         animate("#location-input", "shake", _ => {
           $("#location-input").removeClass('error-highlight');
