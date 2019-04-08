@@ -51,6 +51,12 @@ img {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
 }
 
+.btn {
+  border-radius: 0 0 0 40px;
+  width: 100%;
+  color: #181b46;
+}
+
 #event-card {
   z-index: 900;
   background-color: #bedae5;
@@ -67,4 +73,14 @@ img {
 
 #card-text {
   margin-bottom: 20px;
+}
+
+.the-form {
+  background-color: #bedae5;
+  color: #181b46;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+  border-radius: 0 0 0 15px;
+  margin-top: -50px;
+  z-index: 200;
+  padding: 55px 10px 10px 10px;
 }
