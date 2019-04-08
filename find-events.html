@@ -22,7 +22,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap-grid.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
     />
     <link
       rel="stylesheet"
@@ -45,19 +45,7 @@
     <script defer src="assets/js/find-events.js"></script>
   </head>
   <body>
-    <!-- TODO:
-        * Display events one by one for users to select user tinder-like interactions
-    -->
-    <!--    <header>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm">
-            <h1>First, choose your event!</h1>
-          </div>
-        </div>
-      </div>
-    </header>-->
-    <div class=" set-font set-color container">
+    <div class=" set-font set-color container d-none" id="find-events-main-content">
       <div class="row">
         <div class="col-sm">
           <div
@@ -109,9 +97,7 @@
               </p>
             </div>
             <div class="uk-card-footer">
-              <a href="find-restaurants.html" class="uk-button uk-button-text"
-                >Choose this event</a
-              >
+              <button class="uk-button uk-button-text">Choose this event</button>
             </div>
           </div>
           <div class="uk-card uk-card-default uk-width-1-2@m" id="event2">
@@ -141,9 +127,7 @@
               </p>
             </div>
             <div class="uk-card-footer">
-              <a href="find-restaurants.html" class="uk-button uk-button-text"
-                >Choose this event</a
-              >
+              <button class="uk-button uk-button-text">Choose this event</button>
             </div>
           </div>
           <div class="uk-card uk-card-default uk-width-1-2@m" id="event3">
@@ -173,9 +157,7 @@
               </p>
             </div>
             <div class="uk-card-footer">
-              <a href="find-restaurants.html" class="uk-button uk-button-text"
-                >Choose this event</a
-              >
+              <button class="uk-button uk-button-text">Choose this event</button>
             </div>
           </div>
           <div class="uk-card uk-card-default uk-width-1-2@m" id="event4">
@@ -205,9 +187,7 @@
               </p>
             </div>
             <div class="uk-card-footer">
-              <a href="find-restaurants.html" class="uk-button uk-button-text"
-                >Choose this event</a
-              >
+              <button class="uk-button uk-button-text">Choose this event</button>
             </div>
           </div>
           <div class="uk-card uk-card-default uk-width-1-2@m" id="event5">
@@ -237,9 +217,7 @@
               </p>
             </div>
             <div class="uk-card-footer">
-              <a href="find-restaurants.html" class="uk-button uk-button-text"
-                >Choose this event</a
-              >
+              <button class="uk-button uk-button-text">Choose this event</button>
             </div>
           </div>
           <div class="uk-card uk-card-default uk-width-1-2@m" id="event6">
@@ -269,9 +247,7 @@
               </p>
             </div>
             <div class="uk-card-footer">
-              <a href="find-restaurants.html" class="uk-button uk-button-text"
-                >Choose this event</a
-              >
+              <button class="uk-button uk-button-text">Choose this event</button>
             </div>
           </div>
           <div class="uk-card uk-card-default uk-width-1-2@m" id="event7">
@@ -301,9 +277,7 @@
               </p>
             </div>
             <div class="uk-card-footer">
-              <a href="find-restaurants.html" class="uk-button uk-button-text"
-                >Choose this event</a
-              >
+              <button class="uk-button uk-button-text">Choose this event</button>
             </div>
           </div>
           <div class="uk-card uk-card-default uk-width-1-2@m" id="event8">
@@ -333,9 +307,7 @@
               </p>
             </div>
             <div class="uk-card-footer">
-              <a href="find-restaurants.html" class="uk-button uk-button-text"
-                >Choose this event</a
-              >
+              <button class="uk-button uk-button-text">Choose this event</button>
             </div>
           </div>
           <div class="uk-card uk-card-default uk-width-1-2@m" id="event9">
@@ -365,9 +337,7 @@
               </p>
             </div>
             <div class="uk-card-footer">
-              <a href="find-restaurants.html" class="uk-button uk-button-text"
-                >Choose this event</a
-              >
+              <button class="uk-button uk-button-text">Choose this event</button>
             </div>
           </div>
           <div class="uk-card uk-card-default uk-width-1-2@m" id="event10">
@@ -397,12 +367,18 @@
               </p>
             </div>
             <div class="uk-card-footer">
-              <a href="find-restaurants.html" class="uk-button uk-button-text"
-                >Choose this event</a
-              >
+              <button class="uk-button uk-button-text">Choose this event</button>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+    <div id="find-events-loading-display">
+      <div class="p-5 bg-light rounded-lg">
+        <div class="spinner-border text-primary mx-5" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+        <p class="text-dark m-2 mt-4 text-center">Loading...</p>
       </div>
     </div>
   </body>

@@ -6,7 +6,8 @@ const zomatoKeys = new Cycle([
 
 
 const zomatoEndpoints = {
-    search: "https://developers.zomato.com/api/v2.1/search"
+    search: "https://developers.zomato.com/api/v2.1/search",
+    geocode: "https://developers.zomato.com/api/v2.1/geocode"
 }
 
 var Zomato = {
