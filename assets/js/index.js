@@ -36,15 +36,18 @@ $(function () {
     container: document.querySelector('#location-input')
   });
 
-  let postalCode;
+  let postalCode, lng, lat;
 
   placesAutocomplete.on("change", event => {
-    postalCode = event.suggestion.postcode;
+    postalCode = event.suggestion.postcode; // FIXME: Certain postcodes are empty
+    lng = event.suggestion.latlng.lng;
+    lat = event.suggestion.latlng.lat;
+    console.log(event.suggestion);
     $(".ap-input-icon").css({ display: 'none' });
   });
   
   placesAutocomplete.on("clear", event => {
-    postalCode = undefined;
+    postalCode = undefined; lng = undefined; lat = undefined;
     $(".ap-input-icon").css({ display: 'none' });
   })
 
@@ -54,15 +57,14 @@ $(function () {
     event.preventDefault();
     let locationName = $("#location-input").val();
     let date = $("#datepicker").val();
-    if (postalCode && locationName && date) {
-      let transferData = { locationName, postalCode, date };
+    if (postalCode && locationName && lat && lng && date) {
+      let transferData = { locationName, postalCode, lng, lat, date };
       window.localStorage.setItem("indexData", JSON.stringify(transferData));
       window.open("./find-events.html", "_self");
     } else {
       // TODO: Display error for incorrectly chosen location.
-      if (!lng || !lat || !locationName) {
+      if (!postalCode || !lng || !lat || !locationName) {
         $("#location-input").addClass('error-highlight');
-        animate(".algolia-places > button", "shake");
         animate("#location-input", "shake", _ => {
           $("#location-input").removeClass('error-highlight');
         });
