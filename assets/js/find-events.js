@@ -3,11 +3,15 @@ let data = window.localStorage.getItem("indexData");
 if (!data) window.open("./", "_self");
 let loadedData = JSON.parse(data);
 
-// TODO: Filter data of dupes and by date
-
 $(_ => {
     Ticketmaster.search({ postalCode: loadedData.postalCode })
         .then(data => {
+            console.log(data);
+            if (data.page.totalElements < 10) {
+                // TODO: Display page saying results could not be found in this location
+                console.error("There was not enough element pulled to display to the page!");
+                return;
+            }
             let {
                 _embedded: {
                     events
@@ -33,10 +37,8 @@ $(_ => {
                             eventLoc: rawEventData._embedded.venues["0"].location,
                         }
                     }
-                    console.log(savedEventData);
                     saveEventData(savedEventData);
-                    console.log("savedEventData");
-                    window.location = "find-restaurants.html"
+                    window.open("./find-restaurants.html", "_self");
                 });
             });
         })
