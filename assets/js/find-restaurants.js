@@ -7,9 +7,13 @@ $(_ => {
     // TODO: Update query to use lng lat & radius
     Zomato.search({ q: "seafood" })
         .then(response => {
+            console.log(response);
             let { restaurants, results_found: resultCount } = response;
             restaurants.forEach(rawRestaurantEvent => {
                 // TODO: Add code for displaying restaurants to the end-user and handling restaurant selection here
+
+                
+
             });
         })
         .catch(err => {
