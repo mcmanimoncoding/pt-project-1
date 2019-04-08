@@ -6,7 +6,7 @@ let loadedData = JSON.parse(data);
 
 $(_ => {
     console.log("Zomato");
-    Zomato.search({ lng: loadedData.lng, lat: loadedData.lat })
+    Zomato.search({ lon: loadedData.lng, lat: loadedData.lat })
         .then(response => {
             let { restaurants, results_found: resultCount } = response;
             console.log(response);

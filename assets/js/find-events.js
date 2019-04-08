@@ -4,7 +4,7 @@ if (!data) window.open("./", "_self");
 let loadedData = JSON.parse(data);
 
 $(_ => {
-    Ticketmaster.search({ postalCode: loadedData.postalCode })
+    Ticketmaster.search({ countryCode: loadedData.countryCode, city: loadedData.city })
         .then(data => {
             console.log(data);
             if (data.page.totalElements < 10) {
@@ -26,7 +26,6 @@ $(_ => {
 
                 $(ev + " button").on("click", function (event) {
                     event.preventDefault();
-                    console.log("Click")
                     var savedEventData = {
                         event: {
                             name: rawEventData.name,
