@@ -1,6 +1,8 @@
 
 const zomatoKeys = new Cycle([
-    "ee788b25e3c80fcb00d615303cde31c8"
+    "ee788b25e3c80fcb00d615303cde31c8",
+    "df29cbd9276beed080cd6b167e95c73a",
+    "6f9a04e4df423defb036e6beb35060d4"
     // TODO: Add other api keys
 ]);
 
