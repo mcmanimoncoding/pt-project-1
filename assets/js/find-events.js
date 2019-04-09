@@ -3,10 +3,18 @@ let data = window.localStorage.getItem("indexData");
 if (!data) window.open("./", "_self");
 let loadedData = JSON.parse(data);
 
+let timeDecode = new Date(loadedData.date).toISOString();
+
 $(_ => {
-    Ticketmaster.search({ countryCode: loadedData.countryCode, city: loadedData.city })
+    console.log(loadedData);
+    Ticketmaster.search({
+        countryCode: loadedData.countryCode,
+        city: loadedData.city,
+        // startDateTime: timeDecode,
+        includeTBA: "no", 
+        includeTBD: "no"
+    })
         .then(data => {
-            console.log(data);
             if (data.page.totalElements < 10) {
                 // TODO: Display page saying results could not be found in this location
                 throw new RangeError("There was not enough element pulled to display to the page!");
@@ -57,7 +65,6 @@ $(_ => {
      */
     function saveEventData(savedEventData) {
         window.localStorage.setItem("savedEventData", JSON.stringify(savedEventData));
-        // console.log(savedEventData);
     }
 
     // TODO: Add "loading" animation to page before results are displayed
