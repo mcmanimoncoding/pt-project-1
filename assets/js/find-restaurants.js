@@ -6,9 +6,9 @@ let loadedData = JSON.parse(data);
 $(_ => {
     console.log("Zomato");
     Zomato.search({
-            lon: loadedData.lng,
-            lat: loadedData.lat
-        })
+        lon: loadedData.lng,
+        lat: loadedData.lat
+    })
         .then(response => {
             console.log(response);
             let {
@@ -31,23 +31,17 @@ $(_ => {
                 };
 
                 $(res + " #rest-title").text(rawRestaurantData.restaurant.name);
-
                 $(res + " .rest-address").text(rawRestaurantData.restaurant.location.address);
-
                 $(res + " #rest-details").text("Rating: " + rawRestaurantData.restaurant.user_rating.aggregate_rating + " out of 5").append("<br>Cuisine: " + rawRestaurantData.restaurant.cuisines).append("<br><br><a href='" + rawRestaurantData.restaurant.menu_url + "'><h3>Check Out The Menu!</h3></a>");
 
-
-
                 $(res + " button").on("click", function (event) {
-                    console.log("click")
                     event.preventDefault();
                     var savedRestData = {
-                        restaurant: {
-                            restName: rawRestaurantData.restaurant.name,
-                            restAddress: rawRestaurantData.restaurant.location.address,
-                            restImg: rawRestaurantData.restaurant.featured_image,
-                            restCuisine: rawRestaurantData.restaurant.cuisines,
-                        }
+                        restName: rawRestaurantData.restaurant.name,
+                        restAddress: rawRestaurantData.restaurant.location.address,
+                        restImg: rawRestaurantData.restaurant.featured_image,
+                        restCuisine: rawRestaurantData.restaurant.cuisines,
+                        restURL: rawRestaurantData.restaurant.url
                     }
                     saveRestData(savedRestData);
                     window.open("./itinerary.html", "_self");

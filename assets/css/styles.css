@@ -17,6 +17,12 @@ body {
 #search-button {
   background-color: #bedae5;
   color: #181b46;
+  width: 90%;
+  align-content: center;
+}
+
+.form {
+  align-items: center;
 }
 
 #reviews-button {
