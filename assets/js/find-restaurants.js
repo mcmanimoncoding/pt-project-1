@@ -32,7 +32,9 @@ $(_ => {
 
                 $(res + " #rest-title").text(rawRestaurantData.restaurant.name);
                 $(res + " .rest-address").text(rawRestaurantData.restaurant.location.address);
-                $(res + " #rest-details").text("Rating: " + rawRestaurantData.restaurant.user_rating.aggregate_rating + " out of 5").append("<br>Cuisine: " + rawRestaurantData.restaurant.cuisines).append("<br><br><a href='" + rawRestaurantData.restaurant.menu_url + "'><h3>Check Out The Menu!</h3></a>");
+                $(res + " #rest-details").text("Rating: " + rawRestaurantData.restaurant.user_rating.aggregate_rating + " out of 5");
+                $(res + " #rest-details").append("<br>Cuisine: " + rawRestaurantData.restaurant.cuisines);
+                $(res + " #rest-details").append("<br><br><a href='" + rawRestaurantData.restaurant.menu_url + "'><h3>Check Out The Menu!</h3></a>");
 
                 $(res + " button").on("click", function (event) {
                     event.preventDefault();
