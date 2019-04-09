@@ -23,7 +23,12 @@ $(_ => {
 
                 console.log(rawRestaurantData.restaurant.photos_url);
 
-                $(res + " .uk-card-media").attr("src", rawRestaurantData.restaurant.featured_image);
+                if (rawRestaurantData.restaurant.featured_image !== ""){
+
+                    $(res + " .uk-card-media").attr("src", rawRestaurantData.restaurant.featured_image);
+                }else{
+                    
+                };
 
                 $(res + " #rest-title").text(rawRestaurantData.restaurant.name);
 
