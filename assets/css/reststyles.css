@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  background-image: linear-gradient(#6c838b, #ccd3d9, #12406a);
+  background-image: url(../images/event-icon.jpg);
   display: flex;
   justify-content: center;
   align-items: center;
