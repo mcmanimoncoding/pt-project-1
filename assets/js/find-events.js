@@ -19,8 +19,12 @@ $(_ => {
             events.forEach((rawEventData, index) => {
                 // TODO: Add code for displaying events to the end-user and handling event selection here
                 let ev = "#event" + (index + 1);
-                $(ev + " .uk-card-media").attr("src", rawEventData.images["0"].url);
-                $(ev + " #event-title").text(rawEventData.name);
+                if (rawEventData.images["0"].url !== ""){
+                    $(ev + " .uk-card-media").attr("src", rawEventData.images["0"].url);
+                }else{
+                    console.log("empty")
+                };
+                    $(ev + " #event-title").text(rawEventData.name);
                 $(ev + " .event-time").text(rawEventData.dates.start.localTime);
                 $(ev + " #event-details").html("<a target='_blank' href='" + rawEventData.url + "'>Details for " + rawEventData.name + "' </a>");
 
